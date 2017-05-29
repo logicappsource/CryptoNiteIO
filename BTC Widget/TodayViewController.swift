@@ -17,6 +17,7 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
     //Line Width -> (color to white modifed here
     var lineWidth: CGFloat = 2.0
 
+    @IBOutlet weak var priceSelectionVibrancyView: UIVisualEffectView!
     
     @IBOutlet weak var vibrancyView: UIVisualEffectView!
         
@@ -32,6 +33,7 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
         vibrancyView.effect = UIVibrancyEffect.widgetPrimary()
+        priceSelectionVibrancyView.effect = UIVibrancyEffect.widgetSecondary()
         
     }
     
@@ -70,15 +72,30 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         let expanded = extensionContext!.widgetActiveDisplayMode == .expanded
         if expanded {
             lineWidth = 4.0
+            priceOnDayLabel.isHidden = false
         } else {
             lineWidth = 2.0
+            priceOnDayLabel.isHidden = true
         }
+        priceOnDayLabel.text = ""
     }
     
     override func lineChartView(_ lineChartView: JBLineChartView!, widthForLineAtLineIndex lineIndex: UInt) -> CGFloat {
         return lineWidth
     }
+
     
+    func lineChartView(_ lineChartView: JBLineChartView!, didSelectLineAtIndex lineIndex: UInt, horizontalIndex: UInt) {
+        if let prices = prices {
+            let price = prices[Int(horizontalIndex)]
+            updatePriceOnDayLabel(price)
+            print(price)
+        }
+    }
+    
+    func didUnselectLineInLineChartView(_ lineChartView: JBLineChartView!) {
+        priceOnDayLabel.text = ""
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

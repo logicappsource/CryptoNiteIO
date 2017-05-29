@@ -51,14 +51,38 @@
                                     <blurEffect style="light"/>
                                 </vibrancyEffect>
                             </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xax-pW-WQI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YJu-ZS-hLh">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cth-JW-jdz">
+                                            <rect key="frame" x="139" y="44" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Xax-pW-WQI" firstAttribute="centerX" secondItem="aii-YY-Q48" secondAttribute="centerX" id="1mz-tF-olO"/>
+                            <constraint firstItem="Xax-pW-WQI" firstAttribute="leading" secondItem="aii-YY-Q48" secondAttribute="leading" id="2yg-bO-elj"/>
+                            <constraint firstItem="Xax-pW-WQI" firstAttribute="trailing" secondItem="aii-YY-Q48" secondAttribute="trailing" id="3ro-vc-qCg"/>
+                            <constraint firstItem="Xax-pW-WQI" firstAttribute="top" secondItem="aii-YY-Q48" secondAttribute="top" id="FHR-Tq-DcA"/>
                             <constraint firstAttribute="trailing" secondItem="aii-YY-Q48" secondAttribute="trailing" id="JgP-s2-SWj"/>
                             <constraint firstItem="aii-YY-Q48" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="50" id="Kbw-0Y-lRZ"/>
                             <constraint firstItem="aii-YY-Q48" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="S4r-fr-CiX"/>
                             <constraint firstItem="6uz-LN-42q" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="TGT-c6-RH2"/>
                             <constraint firstItem="D8b-Ze-T2J" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="X6D-jP-CWV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6uz-LN-42q" secondAttribute="trailing" id="Yuf-0j-Xlk"/>
+                            <constraint firstItem="Xax-pW-WQI" firstAttribute="bottom" secondItem="aii-YY-Q48" secondAttribute="bottom" id="gvL-E7-bzy"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="aii-YY-Q48" secondAttribute="bottom" id="lyQ-VY-a9D"/>
                             <constraint firstItem="D8b-Ze-T2J" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="rk9-gg-RfH"/>
                         </constraints>
@@ -73,6 +97,8 @@
                         <outlet property="lineChartView" destination="7xf-fH-KEw" id="1sX-L7-dAt"/>
                         <outlet property="priceChangeLabel" destination="6uz-LN-42q" id="od1-g5-soZ"/>
                         <outlet property="priceLabel" destination="D8b-Ze-T2J" id="Wwa-It-yuO"/>
+                        <outlet property="priceOnDayLabel" destination="Cth-JW-jdz" id="Rxa-JF-Mt0"/>
+                        <outlet property="priceSelectionVibrancyView" destination="Xax-pW-WQI" id="uDy-RM-kuS"/>
                         <outlet property="vibrancyView" destination="aii-YY-Q48" id="vCY-0n-M59"/>
                     </connections>
                 </viewController>
