@@ -20,6 +20,21 @@
 		6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6068F51EDC25B30069FF50 /* MainInterface.storyboard */; };
 		6E6068FB1EDC25B30069FF50 /* BTC Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E6068F01EDC25B30069FF50 /* BTC Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E6068FF1EDC25BE0069FF50 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
+		6E6069001EDC768F0069FF50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DA616E1965E33100E97CC3 /* Images.xcassets */; };
+		6E6069021EDC8D2D0069FF50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */; };
+		6E60690C1EDC8E190069FF50 /* BitcoinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069051EDC8E190069FF50 /* BitcoinCoordinator.swift */; };
+		6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069061EDC8E190069FF50 /* BitcoinInteractor.swift */; };
+		6E60690E1EDC8E190069FF50 /* BitcoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069071EDC8E190069FF50 /* BitcoinModels.swift */; };
+		6E60690F1EDC8E190069FF50 /* BitcoinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069081EDC8E190069FF50 /* BitcoinPresenter.swift */; };
+		6E6069101EDC8E190069FF50 /* BitcoinProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069091EDC8E190069FF50 /* BitcoinProtocols.swift */; };
+		6E6069111EDC8E190069FF50 /* BitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E60690A1EDC8E190069FF50 /* BitcoinViewController.swift */; };
+		6E6069121EDC8E190069FF50 /* BitcoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E60690B1EDC8E190069FF50 /* BitcoinViewController.xib */; };
+		6E88476C1EDC951A001CC971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476B1EDC951A001CC971 /* Alamofire.framework */; };
+		6E88476E1EDC951C001CC971 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476D1EDC951C001CC971 /* Cashier.framework */; };
+		6E8847701EDC9520001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
+		6E8847721EDC96CB001CC971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476B1EDC951A001CC971 /* Alamofire.framework */; };
+		6E8847731EDC96CE001CC971 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476D1EDC951C001CC971 /* Cashier.framework */; };
+		6E8847741EDC96D3001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +112,17 @@
 		6E6068F31EDC25B30069FF50 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		6E6068F61EDC25B30069FF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6E6068F81EDC25B30069FF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6E6069051EDC8E190069FF50 /* BitcoinCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinCoordinator.swift; sourceTree = "<group>"; };
+		6E6069061EDC8E190069FF50 /* BitcoinInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinInteractor.swift; sourceTree = "<group>"; };
+		6E6069071EDC8E190069FF50 /* BitcoinModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinModels.swift; sourceTree = "<group>"; };
+		6E6069081EDC8E190069FF50 /* BitcoinPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinPresenter.swift; sourceTree = "<group>"; };
+		6E6069091EDC8E190069FF50 /* BitcoinProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinProtocols.swift; sourceTree = "<group>"; };
+		6E60690A1EDC8E190069FF50 /* BitcoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinViewController.swift; sourceTree = "<group>"; };
+		6E60690B1EDC8E190069FF50 /* BitcoinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitcoinViewController.xib; sourceTree = "<group>"; };
+		6E88476B1EDC951A001CC971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		6E88476D1EDC951C001CC971 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cashier.framework; path = Carthage/Build/iOS/Cashier.framework; sourceTree = "<group>"; };
+		6E88476F1EDC9520001CC971 /* Serpent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Serpent.framework; path = Carthage/Build/iOS/Serpent.framework; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -117,6 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DA619E1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Frameworks */,
+				6E8847721EDC96CB001CC971 /* Alamofire.framework in Frameworks */,
+				6E8847741EDC96D3001CC971 /* Serpent.framework in Frameworks */,
+				6E8847731EDC96CE001CC971 /* Cashier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8847701EDC9520001CC971 /* Serpent.framework in Frameworks */,
+				6E88476E1EDC951C001CC971 /* Cashier.framework in Frameworks */,
+				6E88476C1EDC951A001CC971 /* Alamofire.framework in Frameworks */,
 				6E6068FF1EDC25BE0069FF50 /* CryptoCurrencyKit.framework in Frameworks */,
 				6E6068F11EDC25B30069FF50 /* NotificationCenter.framework in Frameworks */,
 			);
@@ -163,12 +195,14 @@
 		07DA61641965E33100E97CC3 /* Crypticker */ = {
 			isa = PBXGroup;
 			children = (
+				6E6069031EDC8DD80069FF50 /* Scenes */,
 				07DA61671965E33100E97CC3 /* AppDelegate.swift */,
 				07DA61691965E33100E97CC3 /* ViewController.swift */,
 				07DA616B1965E33100E97CC3 /* Main.storyboard */,
 				4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */,
 				07DA616E1965E33100E97CC3 /* Images.xcassets */,
 				07DA61651965E33100E97CC3 /* Supporting Files */,
+				6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */,
 			);
 			path = Crypticker;
 			sourceTree = "<group>";
@@ -213,6 +247,28 @@
 			path = "BTC Widget";
 			sourceTree = "<group>";
 		};
+		6E6069031EDC8DD80069FF50 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6E6069041EDC8DE10069FF50 /* Bitcoin */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		6E6069041EDC8DE10069FF50 /* Bitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				6E6069051EDC8E190069FF50 /* BitcoinCoordinator.swift */,
+				6E6069061EDC8E190069FF50 /* BitcoinInteractor.swift */,
+				6E6069071EDC8E190069FF50 /* BitcoinModels.swift */,
+				6E6069081EDC8E190069FF50 /* BitcoinPresenter.swift */,
+				6E6069091EDC8E190069FF50 /* BitcoinProtocols.swift */,
+				6E60690A1EDC8E190069FF50 /* BitcoinViewController.swift */,
+				6E60690B1EDC8E190069FF50 /* BitcoinViewController.xib */,
+			);
+			name = Bitcoin;
+			sourceTree = "<group>";
+		};
 		8331BFF219671DBE00FBA23E /* JBChartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +285,9 @@
 		8331C02B19677E9000FBA23E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E88476F1EDC9520001CC971 /* Serpent.framework */,
+				6E88476D1EDC951C001CC971 /* Cashier.framework */,
+				6E88476B1EDC951A001CC971 /* Alamofire.framework */,
 				8331C02C19677E9000FBA23E /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -269,6 +328,7 @@
 				07DA61601965E33100E97CC3 /* Resources */,
 				07DA61A71965E3A600E97CC3 /* Embed Frameworks */,
 				8331C03D19677E9000FBA23E /* Embed App Extensions */,
+				6E8847751EDC96DA001CC971 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -307,6 +367,7 @@
 				6E6068EC1EDC25B30069FF50 /* Sources */,
 				6E6068ED1EDC25B30069FF50 /* Frameworks */,
 				6E6068EE1EDC25B30069FF50 /* Resources */,
+				6E8847711EDC9542001CC971 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -369,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */,
+				6E6069121EDC8E190069FF50 /* BitcoinViewController.xib in Resources */,
 				07DA616D1965E33100E97CC3 /* Main.storyboard in Resources */,
 				07DA616F1965E33100E97CC3 /* Images.xcassets in Resources */,
 			);
@@ -386,18 +448,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */,
+				6E6069001EDC768F0069FF50 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E8847711EDC9542001CC971 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Serpent.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cashier.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		6E8847751EDC96DA001CC971 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Serpent.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cashier.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07DA615E1965E33100E97CC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E60690F1EDC8E190069FF50 /* BitcoinPresenter.swift in Sources */,
+				6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */,
 				07DA616A1965E33100E97CC3 /* ViewController.swift in Sources */,
 				07DA61681965E33100E97CC3 /* AppDelegate.swift in Sources */,
+				6E6069111EDC8E190069FF50 /* BitcoinViewController.swift in Sources */,
+				6E6069021EDC8D2D0069FF50 /* HomeViewController.swift in Sources */,
+				6E60690E1EDC8E190069FF50 /* BitcoinModels.swift in Sources */,
+				6E6069101EDC8E190069FF50 /* BitcoinProtocols.swift in Sources */,
+				6E60690C1EDC8E190069FF50 /* BitcoinCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +662,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Crypticker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,6 +681,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Crypticker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -642,6 +755,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "BTC Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -663,6 +780,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "BTC Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -711,6 +832,7 @@
 				6E6068FE1EDC25B30069FF50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
