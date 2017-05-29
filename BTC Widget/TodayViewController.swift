@@ -35,6 +35,8 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         vibrancyView.effect = UIVibrancyEffect.widgetPrimary()
         priceSelectionVibrancyView.effect = UIVibrancyEffect.widgetSecondary()
         
+        
+        
     }
     
     
@@ -97,6 +99,9 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         priceOnDayLabel.text = ""
     }
     
+
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -109,6 +114,18 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
+        fetchPrices { error in
+            if error == nil {
+                self.updatePriceLabel()
+                self.updatePriceChangeLabel()
+                self.updatePriceHistoryLineChart()
+                completionHandler(.newData)
+            } else {
+                completionHandler(.failed)
+            }
+        }
+        
+
         completionHandler(NCUpdateResult.newData)
     }
     
