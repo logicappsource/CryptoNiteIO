@@ -12,6 +12,13 @@ import CryptoCurrencyKit
 
 
 class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
+
+    
+    //Line Width -> (color to white modifed here
+    var lineWidth: CGFloat = 2.0
+
+    
+    @IBOutlet weak var vibrancyView: UIVisualEffectView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +28,11 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         
         priceLabel.text = "--"
         priceChangeLabel.text = "--"
+        
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
+        vibrancyView.effect = UIVibrancyEffect.widgetPrimary()
+        
     }
     
     
@@ -35,6 +47,37 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
                 }
             }
         }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updatePriceHistoryLineChart()
+    }
+    
+    
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        let expanded = activeDisplayMode == .expanded
+        preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 200) : maxSize
+        toggleLineChart()
+        
+    }
+    
+    override func lineChartView(_ lineChartView: JBLineChartView!, colorForLineAtLineIndex lineIndex: UInt) -> UIColor! {
+        return lineChartView.tintColor
+    }
+    
+    
+    private func toggleLineChart () {
+        let expanded = extensionContext!.widgetActiveDisplayMode == .expanded
+        if expanded {
+            lineWidth = 4.0
+        } else {
+            lineWidth = 2.0
+        }
+    }
+    
+    override func lineChartView(_ lineChartView: JBLineChartView!, widthForLineAtLineIndex lineIndex: UInt) -> CGFloat {
+        return lineWidth
+    }
     
     
     override func didReceiveMemoryWarning() {

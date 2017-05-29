@@ -34,19 +34,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-fH-KEw" customClass="JBLineChartView">
-                                <rect key="frame" x="0.0" y="59" width="320" height="51"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aii-YY-Q48">
+                                <rect key="frame" x="0.0" y="51" width="320" height="59"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1i3-E2-usx">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-fH-KEw" customClass="JBLineChartView">
+                                            <rect key="frame" x="0.0" y="4" width="320" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7xf-fH-KEw" secondAttribute="trailing" id="6lu-ce-yuY"/>
-                            <constraint firstItem="7xf-fH-KEw" firstAttribute="top" secondItem="6uz-LN-42q" secondAttribute="bottom" constant="16" id="Bk3-tE-tla"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="7xf-fH-KEw" secondAttribute="bottom" id="H6R-tH-n08"/>
-                            <constraint firstItem="7xf-fH-KEw" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="N0U-Fr-VHf"/>
+                            <constraint firstAttribute="trailing" secondItem="aii-YY-Q48" secondAttribute="trailing" id="JgP-s2-SWj"/>
+                            <constraint firstItem="aii-YY-Q48" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="50" id="Kbw-0Y-lRZ"/>
+                            <constraint firstItem="aii-YY-Q48" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="S4r-fr-CiX"/>
                             <constraint firstItem="6uz-LN-42q" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="TGT-c6-RH2"/>
                             <constraint firstItem="D8b-Ze-T2J" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="X6D-jP-CWV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6uz-LN-42q" secondAttribute="trailing" id="Yuf-0j-Xlk"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="aii-YY-Q48" secondAttribute="bottom" id="lyQ-VY-a9D"/>
                             <constraint firstItem="D8b-Ze-T2J" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="rk9-gg-RfH"/>
                         </constraints>
                     </view>
@@ -60,6 +73,7 @@
                         <outlet property="lineChartView" destination="7xf-fH-KEw" id="1sX-L7-dAt"/>
                         <outlet property="priceChangeLabel" destination="6uz-LN-42q" id="od1-g5-soZ"/>
                         <outlet property="priceLabel" destination="D8b-Ze-T2J" id="Wwa-It-yuO"/>
+                        <outlet property="vibrancyView" destination="aii-YY-Q48" id="vCY-0n-M59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
