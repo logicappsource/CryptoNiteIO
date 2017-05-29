@@ -16,7 +16,26 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        lineChartView.delegate = self
+        lineChartView.dataSource = self
+        
+        priceLabel.text = "--"
+        priceChangeLabel.text = "--"
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchPrices { error in
+            if error == nil {
+                self.updatePriceLabel()
+                self.updatePriceChangeLabel()
+                self.updatePriceHistoryLineChart()
+                }
+            }
+        }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
