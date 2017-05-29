@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-/*
+
 
 class BitcoinCoordinator: Coordinator {
     let navigationController: UINavigationController
@@ -36,4 +36,4 @@ class BitcoinCoordinator: Coordinator {
 extension BitcoinCoordinator: BitcoinCoordinatorInput {
 
 }
-*/
+
