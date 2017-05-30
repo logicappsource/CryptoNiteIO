@@ -37,6 +37,7 @@
 		6E8847741EDC96D3001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
 		6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847771EDCA1F6001CC971 /* Coordinator.swift */; };
 		6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847791EDCA209001CC971 /* AppCoordinator.swift */; };
+		6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,6 +128,7 @@
 		6E88476F1EDC9520001CC971 /* Serpent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Serpent.framework; path = Carthage/Build/iOS/Serpent.framework; sourceTree = "<group>"; };
 		6E8847771EDCA1F6001CC971 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6E8847791EDCA209001CC971 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencies.swift; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				6E8847771EDCA1F6001CC971 /* Coordinator.swift */,
 				6E8847791EDCA209001CC971 /* AppCoordinator.swift */,
+				6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */,
+				6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */,
 				6E60690F1EDC8E190069FF50 /* BitcoinPresenter.swift in Sources */,
 				6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */,
 				6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */,
