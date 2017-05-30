@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 
 class BitcoinInteractor {
     weak var output: BitcoinInteractorOutput?
@@ -18,3 +18,35 @@ class BitcoinInteractor {
 // PRESENTER -> INTERACTOR
 extension BitcoinInteractor: BitcoinInteractorInput {
 }
+
+
+
+
+
+func requestCryptoCurrencies(){
+    makeCryptoCurrenciesRequest{ (response) in
+        switch response.result {
+        case .success(let CryptoCurrency):
+            print("Result of respond: \(CryptoCurrency)")
+            
+            for currency in CryptoCurrency.currencies {
+                print(" Currecny : \(CryptoCurrency.augur)")
+            }
+            
+        case .failure(let error):
+            print("Request failed: \(error.localizedDescription)")
+        
+         }
+    }
+}
+
+
+
+
+
+    //GET  - Currencies Endpoint
+func makeCryptoCurrenciesRequest(completion: @escaping (DataResponse<CryptoCurrencies>) -> Void) {
+    print("Requesting currencies API Call ")
+    request(baseURL_Currency).responseSerializable(completion)
+}
+

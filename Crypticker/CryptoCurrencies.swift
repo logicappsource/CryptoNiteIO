@@ -36,9 +36,9 @@ struct CryptoCurrencies {
     var lisk = ""
     var factom = ""
     var iconomi = ""
-    var pivx = "" 
+    var pivx = ""
+    var Data: [String: [String: AnyObject]] = [:]
 }
-
 
 
 
@@ -71,6 +71,7 @@ extension CryptoCurrencies: Serializable {
         factom         <== (self, dictionary, "factom")
         iconomi        <== (self, dictionary, "iconomi")
         pivx           <== (self, dictionary, "pivx")
+        Data           <== (self, dictionary, "Data")
     }
     
     func encodableRepresentation() -> NSCoding {
@@ -102,6 +103,20 @@ extension CryptoCurrencies: Serializable {
         (dict, "factom")         <== factom
         (dict, "iconomi")        <== iconomi
         (dict, "pivx")           <== pivx
+        (dict, "Data")           <== Data
         return dict
     }
 }
+
+
+
+
+
+extension CryptoCurrencies {
+    var currencies: [CryptoCurrencies] {
+        return Data.values.map({ (value) -> CryptoCurrencies in
+            return CryptoCurrencies(dictionary: value as NSDictionary)
+        })
+    }
+}
+

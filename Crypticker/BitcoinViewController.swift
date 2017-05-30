@@ -29,6 +29,8 @@ class BitcoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        requestCryptoCurrencies()
         presenter.viewCreated()
     }
 

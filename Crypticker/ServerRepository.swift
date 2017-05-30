@@ -9,9 +9,12 @@
 import Foundation
 import Alamofire
 
+
+ let baseURL_Currency = URL(string: "https://www.cryptocompare.com/api/data/coinlist/")! //Global
+
 class ServerRepository {
     
-    let baseURL_Currency = URL(string: "https://www.cryptocompare.com/api/data/coinlist/")!
+   
     
     let manager: SessionManager
     
