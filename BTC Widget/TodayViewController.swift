@@ -24,6 +24,8 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+      
+
         lineChartView.delegate = self
         lineChartView.dataSource = self
         

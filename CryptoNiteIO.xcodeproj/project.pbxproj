@@ -21,7 +21,6 @@
 		6E6068FB1EDC25B30069FF50 /* BTC Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E6068F01EDC25B30069FF50 /* BTC Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E6068FF1EDC25BE0069FF50 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		6E6069001EDC768F0069FF50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DA616E1965E33100E97CC3 /* Images.xcassets */; };
-		6E6069021EDC8D2D0069FF50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */; };
 		6E60690C1EDC8E190069FF50 /* BitcoinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069051EDC8E190069FF50 /* BitcoinCoordinator.swift */; };
 		6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069061EDC8E190069FF50 /* BitcoinInteractor.swift */; };
 		6E60690E1EDC8E190069FF50 /* BitcoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6069071EDC8E190069FF50 /* BitcoinModels.swift */; };
@@ -40,6 +39,15 @@
 		6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */; };
 		6E8847951EDD6D21001CC971 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847941EDD6D21001CC971 /* ServerRepository.swift */; };
 		6E8847971EDD6E58001CC971 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847961EDD6E58001CC971 /* Repository.swift */; };
+		6E88479F1EDEC0E7001CC971 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8331C02C19677E9000FBA23E /* NotificationCenter.framework */; };
+		6E8847A21EDEC0E8001CC971 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */; };
+		6E8847A51EDEC0E8001CC971 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8847A31EDEC0E8001CC971 /* MainInterface.storyboard */; };
+		6E8847A91EDEC0E8001CC971 /* ETH Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E8847AD1EDEC4E8001CC971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476B1EDC951A001CC971 /* Alamofire.framework */; };
+		6E8847AE1EDEC4EA001CC971 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476D1EDC951C001CC971 /* Cashier.framework */; };
+		6E8847AF1EDEC4EE001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
+		6E8847B01EDEC675001CC971 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
+		6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +83,13 @@
 			remoteGlobalIDString = 6E6068EF1EDC25B30069FF50;
 			remoteInfo = "BTC Widget";
 		};
+		6E8847A71EDEC0E8001CC971 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DA615A1965E33100E97CC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E88479D1EDEC0E7001CC971;
+			remoteInfo = "ETH Widget";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,6 +111,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				6E6068FB1EDC25B30069FF50 /* BTC Widget.appex in Embed App Extensions */,
+				6E8847A91EDEC0E8001CC971 /* ETH Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +133,6 @@
 		6E6068F31EDC25B30069FF50 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		6E6068F61EDC25B30069FF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6E6068F81EDC25B30069FF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6E6069051EDC8E190069FF50 /* BitcoinCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinCoordinator.swift; sourceTree = "<group>"; };
 		6E6069061EDC8E190069FF50 /* BitcoinInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinInteractor.swift; sourceTree = "<group>"; };
 		6E6069071EDC8E190069FF50 /* BitcoinModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinModels.swift; sourceTree = "<group>"; };
@@ -133,6 +148,11 @@
 		6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencies.swift; sourceTree = "<group>"; };
 		6E8847941EDD6D21001CC971 /* ServerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
 		6E8847961EDD6E58001CC971 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ETH Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6E8847A41EDEC0E8001CC971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6E8847A61EDEC0E8001CC971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -178,6 +198,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E88479B1EDEC0E7001CC971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8847B01EDEC675001CC971 /* CryptoCurrencyKit.framework in Frameworks */,
+				6E88479F1EDEC0E7001CC971 /* NotificationCenter.framework in Frameworks */,
+				6E8847AD1EDEC4E8001CC971 /* Alamofire.framework in Frameworks */,
+				6E8847AF1EDEC4EE001CC971 /* Serpent.framework in Frameworks */,
+				6E8847AE1EDEC4EA001CC971 /* Cashier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,6 +219,7 @@
 				07DA61641965E33100E97CC3 /* Crypticker */,
 				07DA618A1965E3A600E97CC3 /* CryptoCurrencyKit */,
 				6E6068F21EDC25B30069FF50 /* BTC Widget */,
+				6E8847A01EDEC0E7001CC971 /* ETH Widget */,
 				8331C02B19677E9000FBA23E /* Frameworks */,
 				07DA61631965E33100E97CC3 /* Products */,
 			);
@@ -198,6 +231,7 @@
 				07DA61621965E33100E97CC3 /* CryptoNiteIO.app */,
 				07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */,
 				6E6068F01EDC25B30069FF50 /* BTC Widget.appex */,
+				6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,7 +248,6 @@
 				4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */,
 				07DA616E1965E33100E97CC3 /* Images.xcassets */,
 				07DA61651965E33100E97CC3 /* Supporting files */,
-				6E6069011EDC8D2D0069FF50 /* HomeViewController.swift */,
 			);
 			path = Crypticker;
 			sourceTree = "<group>";
@@ -287,6 +320,7 @@
 				6E8847771EDCA1F6001CC971 /* Coordinator.swift */,
 				6E8847791EDCA209001CC971 /* AppCoordinator.swift */,
 				6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */,
+				6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -298,6 +332,16 @@
 				6E8847961EDD6E58001CC971 /* Repository.swift */,
 			);
 			name = Repository;
+			sourceTree = "<group>";
+		};
+		6E8847A01EDEC0E7001CC971 /* ETH Widget */ = {
+			isa = PBXGroup;
+			children = (
+				6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */,
+				6E8847A31EDEC0E8001CC971 /* MainInterface.storyboard */,
+				6E8847A61EDEC0E8001CC971 /* Info.plist */,
+			);
+			path = "ETH Widget";
 			sourceTree = "<group>";
 		};
 		8331BFF219671DBE00FBA23E /* JBChartView */ = {
@@ -367,6 +411,7 @@
 				07DA619D1965E3A600E97CC3 /* PBXTargetDependency */,
 				07DA61A11965E3A600E97CC3 /* PBXTargetDependency */,
 				6E6068FA1EDC25B30069FF50 /* PBXTargetDependency */,
+				6E8847A81EDEC0E8001CC971 /* PBXTargetDependency */,
 			);
 			name = CryptoNiteIO;
 			productName = Crypticker;
@@ -409,6 +454,23 @@
 			productReference = 6E6068F01EDC25B30069FF50 /* BTC Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		6E88479D1EDEC0E7001CC971 /* ETH Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E8847AA1EDEC0E8001CC971 /* Build configuration list for PBXNativeTarget "ETH Widget" */;
+			buildPhases = (
+				6E88479A1EDEC0E7001CC971 /* Sources */,
+				6E88479B1EDEC0E7001CC971 /* Frameworks */,
+				6E88479C1EDEC0E7001CC971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ETH Widget";
+			productName = "ETH Widget";
+			productReference = 6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -433,6 +495,11 @@
 						DevelopmentTeam = JWZKK84V7N;
 						ProvisioningStyle = Automatic;
 					};
+					6E88479D1EDEC0E7001CC971 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JWZKK84V7N;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 07DA615D1965E33100E97CC3 /* Build configuration list for PBXProject "CryptoNiteIO" */;
@@ -451,6 +518,7 @@
 				07DA61611965E33100E97CC3 /* CryptoNiteIO */,
 				07DA61881965E3A600E97CC3 /* CryptoCurrencyKit */,
 				6E6068EF1EDC25B30069FF50 /* BTC Widget */,
+				6E88479D1EDEC0E7001CC971 /* ETH Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -480,6 +548,14 @@
 			files = (
 				6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */,
 				6E6069001EDC768F0069FF50 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E88479C1EDEC0E7001CC971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8847A51EDEC0E8001CC971 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,9 +611,9 @@
 				6E8847971EDD6E58001CC971 /* Repository.swift in Sources */,
 				6E8847951EDD6D21001CC971 /* ServerRepository.swift in Sources */,
 				6E6069111EDC8E190069FF50 /* BitcoinViewController.swift in Sources */,
-				6E6069021EDC8D2D0069FF50 /* HomeViewController.swift in Sources */,
 				6E60690E1EDC8E190069FF50 /* BitcoinModels.swift in Sources */,
 				6E6069101EDC8E190069FF50 /* BitcoinProtocols.swift in Sources */,
+				6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */,
 				6E60690C1EDC8E190069FF50 /* BitcoinCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +641,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E88479A1EDEC0E7001CC971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8847A21EDEC0E8001CC971 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -583,6 +667,11 @@
 			target = 6E6068EF1EDC25B30069FF50 /* BTC Widget */;
 			targetProxy = 6E6068F91EDC25B30069FF50 /* PBXContainerItemProxy */;
 		};
+		6E8847A81EDEC0E8001CC971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E88479D1EDEC0E7001CC971 /* ETH Widget */;
+			targetProxy = 6E8847A71EDEC0E8001CC971 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -598,6 +687,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E6068F61EDC25B30069FF50 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		6E8847A31EDEC0E8001CC971 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E8847A41EDEC0E8001CC971 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -831,6 +928,54 @@
 			};
 			name = Release;
 		};
+		6E8847AB1EDEC0E8001CC971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ETH Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "CryptoNiteIO.ETH-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6E8847AC1EDEC0E8001CC971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JWZKK84V7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ETH Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "CryptoNiteIO.ETH-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -869,6 +1014,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6E8847AA1EDEC0E8001CC971 /* Build configuration list for PBXNativeTarget "ETH Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E8847AB1EDEC0E8001CC971 /* Debug */,
+				6E8847AC1EDEC0E8001CC971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

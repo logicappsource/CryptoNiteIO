@@ -9,31 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="lfR-ea-RbQ">
-            <objects>
-                <viewController id="DFf-Fi-ip1" customClass="HomeViewController" customModule="CryptoNiteIO" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gmO-Vg-Ads"/>
-                        <viewControllerLayoutGuide type="bottom" id="J8e-2n-x3U"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YKO-aa-otV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-62-eIk">
-                                <rect key="frame" x="153" y="395" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bitcoin "/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="42B-Cu-njw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4" y="285"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Wid-MF-b1j">
             <objects>
@@ -122,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXu-qg-fjK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="285"/>
+            <point key="canvasLocation" x="927" y="272"/>
         </scene>
     </scenes>
 </document>

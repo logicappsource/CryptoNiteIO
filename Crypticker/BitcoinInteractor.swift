@@ -21,8 +21,6 @@ extension BitcoinInteractor: BitcoinInteractorInput {
 
 
 
-
-
 func requestCryptoCurrencies(){
     makeCryptoCurrenciesRequest{ (response) in
         switch response.result {
@@ -30,7 +28,9 @@ func requestCryptoCurrencies(){
             print("Result of respond: \(CryptoCurrency)")
             
             for currency in CryptoCurrency.currencies {
-                print(" Currecny : \(CryptoCurrency.augur)")
+                print(" Currecny : \(CryptoCurrency.bitcoin)")
+                print("Currency: \(CryptoCurrency.ethereum) ")
+                
             }
             
         case .failure(let error):
@@ -39,7 +39,6 @@ func requestCryptoCurrencies(){
          }
     }
 }
-
 
 
 

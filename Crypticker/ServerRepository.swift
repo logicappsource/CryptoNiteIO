@@ -11,6 +11,7 @@ import Alamofire
 
 
  let baseURL_Currency = URL(string: "https://www.cryptocompare.com/api/data/coinlist/")! //Global
+ let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO" ) //Add parameters in the url for more data request
 
 class ServerRepository {
     
