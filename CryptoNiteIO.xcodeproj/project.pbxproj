@@ -53,6 +53,13 @@
 		6E8847B71EDEDF4E001CC971 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */; };
 		6E8847B81EDEDF6D001CC971 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B31EDECFBF001CC971 /* CurrencyData.swift */; };
 		6E8847B91EDEDF6E001CC971 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B31EDECFBF001CC971 /* CurrencyData.swift */; };
+		6E8847C21EDF044C001CC971 /* EthereumCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BB1EDF044C001CC971 /* EthereumCoordinator.swift */; };
+		6E8847C31EDF044C001CC971 /* EthereumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BC1EDF044C001CC971 /* EthereumInteractor.swift */; };
+		6E8847C41EDF044C001CC971 /* EthereumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BD1EDF044C001CC971 /* EthereumModels.swift */; };
+		6E8847C51EDF044C001CC971 /* EthereumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BE1EDF044C001CC971 /* EthereumPresenter.swift */; };
+		6E8847C61EDF044C001CC971 /* EthereumProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BF1EDF044C001CC971 /* EthereumProtocols.swift */; };
+		6E8847C71EDF044C001CC971 /* EthereumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847C01EDF044C001CC971 /* EthereumViewController.swift */; };
+		6E8847C81EDF044C001CC971 /* EthereumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8847C11EDF044C001CC971 /* EthereumViewController.xib */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,6 +166,13 @@
 		6E8847A61EDEC0E8001CC971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		6E8847B31EDECFBF001CC971 /* CurrencyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
+		6E8847BB1EDF044C001CC971 /* EthereumCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumCoordinator.swift; sourceTree = "<group>"; };
+		6E8847BC1EDF044C001CC971 /* EthereumInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumInteractor.swift; sourceTree = "<group>"; };
+		6E8847BD1EDF044C001CC971 /* EthereumModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumModels.swift; sourceTree = "<group>"; };
+		6E8847BE1EDF044C001CC971 /* EthereumPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumPresenter.swift; sourceTree = "<group>"; };
+		6E8847BF1EDF044C001CC971 /* EthereumProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumProtocols.swift; sourceTree = "<group>"; };
+		6E8847C01EDF044C001CC971 /* EthereumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumViewController.swift; sourceTree = "<group>"; };
+		6E8847C11EDF044C001CC971 /* EthereumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EthereumViewController.xib; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -301,6 +315,7 @@
 		6E6069031EDC8DD80069FF50 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6E8847BA1EDF0430001CC971 /* Ethereum */,
 				6E6069041EDC8DE10069FF50 /* Bitcoin */,
 			);
 			name = Scenes;
@@ -349,6 +364,20 @@
 				6E8847A61EDEC0E8001CC971 /* Info.plist */,
 			);
 			path = "ETH Widget";
+			sourceTree = "<group>";
+		};
+		6E8847BA1EDF0430001CC971 /* Ethereum */ = {
+			isa = PBXGroup;
+			children = (
+				6E8847BB1EDF044C001CC971 /* EthereumCoordinator.swift */,
+				6E8847BC1EDF044C001CC971 /* EthereumInteractor.swift */,
+				6E8847BD1EDF044C001CC971 /* EthereumModels.swift */,
+				6E8847BE1EDF044C001CC971 /* EthereumPresenter.swift */,
+				6E8847BF1EDF044C001CC971 /* EthereumProtocols.swift */,
+				6E8847C01EDF044C001CC971 /* EthereumViewController.swift */,
+				6E8847C11EDF044C001CC971 /* EthereumViewController.xib */,
+			);
+			name = Ethereum;
 			sourceTree = "<group>";
 		};
 		8331BFF219671DBE00FBA23E /* JBChartView */ = {
@@ -538,6 +567,7 @@
 				4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */,
 				6E6069121EDC8E190069FF50 /* BitcoinViewController.xib in Resources */,
 				07DA616D1965E33100E97CC3 /* Main.storyboard in Resources */,
+				6E8847C81EDF044C001CC971 /* EthereumViewController.xib in Resources */,
 				07DA616F1965E33100E97CC3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,17 +639,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */,
+				6E8847C51EDF044C001CC971 /* EthereumPresenter.swift in Sources */,
 				6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */,
+				6E8847C71EDF044C001CC971 /* EthereumViewController.swift in Sources */,
 				6E60690F1EDC8E190069FF50 /* BitcoinPresenter.swift in Sources */,
 				6E8847B41EDECFBF001CC971 /* CurrencyData.swift in Sources */,
 				6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */,
 				6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */,
+				6E8847C41EDF044C001CC971 /* EthereumModels.swift in Sources */,
 				07DA616A1965E33100E97CC3 /* ViewController.swift in Sources */,
+				6E8847C21EDF044C001CC971 /* EthereumCoordinator.swift in Sources */,
+				6E8847C61EDF044C001CC971 /* EthereumProtocols.swift in Sources */,
 				07DA61681965E33100E97CC3 /* AppDelegate.swift in Sources */,
 				6E8847971EDD6E58001CC971 /* Repository.swift in Sources */,
 				6E8847951EDD6D21001CC971 /* ServerRepository.swift in Sources */,
 				6E6069111EDC8E190069FF50 /* BitcoinViewController.swift in Sources */,
 				6E60690E1EDC8E190069FF50 /* BitcoinModels.swift in Sources */,
+				6E8847C31EDF044C001CC971 /* EthereumInteractor.swift in Sources */,
 				6E6069101EDC8E190069FF50 /* BitcoinProtocols.swift in Sources */,
 				6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */,
 				6E60690C1EDC8E190069FF50 /* BitcoinCoordinator.swift in Sources */,
@@ -1034,6 +1070,7 @@
 				6E8847AC1EDEC0E8001CC971 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

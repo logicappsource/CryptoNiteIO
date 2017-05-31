@@ -13,6 +13,10 @@ import Serpent
 import Alamofire
 
 
+//Refresh API CAll on refresh -> touch down 
+
+
+
 class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
     
      let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
@@ -32,10 +36,16 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
                 
             case .success (let exchangeRate):
                 
-               print("Result of the respond API: \(exchangeRate.RAW)")
+                //print("Result of the respond API: \(exchangeRate.RAW)")
                 
                for currency in exchangeRate.currencies {
-                    print("Currenct XRP \(exchangeRate.currencies)")
+                
+                
+                    // print("Currenct XRP \(exchangeRate.currencies)")
+                /*if let name = exchangeRate.RAW[keyPath: "price.eth"] as? String {
+                    print(name)
+                } */
+                
                 }
                 
             case .failure(let error):

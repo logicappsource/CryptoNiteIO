@@ -64,7 +64,6 @@
                             <constraint firstItem="YUT-nY-uFe" firstAttribute="top" secondItem="QQz-tP-cZj" secondAttribute="bottom" constant="16" id="4Ln-Gs-sja">
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
-                            <constraint firstItem="N8d-jL-oUz" firstAttribute="top" secondItem="YUT-nY-uFe" secondAttribute="bottom" id="8Z6-Cc-zeg"/>
                             <constraint firstItem="WyO-6D-I8Y" firstAttribute="centerX" secondItem="cYe-Kf-cIj" secondAttribute="centerX" constant="0.5" id="8sa-1R-NML">
                                 <variation key="heightClass=compact" constant="0.5"/>
                             </constraint>
@@ -72,9 +71,6 @@
                                 <variation key="heightClass=compact" constant="-2"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="YUT-nY-uFe" secondAttribute="trailing" id="D0g-tZ-RNp"/>
-                            <constraint firstItem="cYe-Kf-cIj" firstAttribute="top" secondItem="SLN-KH-ceD" secondAttribute="bottom" constant="5" id="FBy-Fr-xEM">
-                                <variation key="heightClass=compact" constant="-10"/>
-                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="cYe-Kf-cIj" secondAttribute="centerX" id="J2D-Oq-00h">
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
@@ -82,6 +78,8 @@
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="YUT-nY-uFe" firstAttribute="leading" secondItem="BJL-5U-bOE" secondAttribute="leading" id="SXc-kv-OCs"/>
+                            <constraint firstItem="cYe-Kf-cIj" firstAttribute="top" secondItem="SLN-KH-ceD" secondAttribute="bottom" constant="5" id="euJ-Ig-aGg"/>
+                            <constraint firstItem="N8d-jL-oUz" firstAttribute="top" secondItem="YUT-nY-uFe" secondAttribute="bottom" id="hNE-L7-r73"/>
                             <constraint firstItem="YUT-nY-uFe" firstAttribute="centerX" secondItem="QQz-tP-cZj" secondAttribute="centerX" constant="-0.5" id="qOp-u9-vfY">
                                 <variation key="heightClass=compact" constant="-0.5"/>
                             </constraint>
@@ -97,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXu-qg-fjK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="272"/>
+            <point key="canvasLocation" x="495" y="238"/>
         </scene>
     </scenes>
 </document>
