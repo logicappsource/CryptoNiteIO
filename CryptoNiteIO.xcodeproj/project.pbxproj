@@ -40,7 +40,7 @@
 		6E8847951EDD6D21001CC971 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847941EDD6D21001CC971 /* ServerRepository.swift */; };
 		6E8847971EDD6E58001CC971 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847961EDD6E58001CC971 /* Repository.swift */; };
 		6E88479F1EDEC0E7001CC971 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8331C02C19677E9000FBA23E /* NotificationCenter.framework */; };
-		6E8847A21EDEC0E8001CC971 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */; };
+		6E8847A21EDEC0E8001CC971 /* TodayEthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847A11EDEC0E8001CC971 /* TodayEthViewController.swift */; };
 		6E8847A51EDEC0E8001CC971 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8847A31EDEC0E8001CC971 /* MainInterface.storyboard */; };
 		6E8847A91EDEC0E8001CC971 /* ETH Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E8847AD1EDEC4E8001CC971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476B1EDC951A001CC971 /* Alamofire.framework */; };
@@ -48,6 +48,11 @@
 		6E8847AF1EDEC4EE001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
 		6E8847B01EDEC675001CC971 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */; };
+		6E8847B41EDECFBF001CC971 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B31EDECFBF001CC971 /* CurrencyData.swift */; };
+		6E8847B51EDEDF47001CC971 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */; };
+		6E8847B71EDEDF4E001CC971 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */; };
+		6E8847B81EDEDF6D001CC971 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B31EDECFBF001CC971 /* CurrencyData.swift */; };
+		6E8847B91EDEDF6E001CC971 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847B31EDECFBF001CC971 /* CurrencyData.swift */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,10 +154,11 @@
 		6E8847941EDD6D21001CC971 /* ServerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
 		6E8847961EDD6E58001CC971 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ETH Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6E8847A11EDEC0E8001CC971 /* TodayEthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayEthViewController.swift; sourceTree = "<group>"; };
 		6E8847A41EDEC0E8001CC971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6E8847A61EDEC0E8001CC971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		6E8847B31EDECFBF001CC971 /* CurrencyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -321,6 +327,7 @@
 				6E8847791EDCA209001CC971 /* AppCoordinator.swift */,
 				6E88477B1EDD63AD001CC971 /* CryptoCurrencies.swift */,
 				6E8847B11EDECBDB001CC971 /* ExchangeRate.swift */,
+				6E8847B31EDECFBF001CC971 /* CurrencyData.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -337,7 +344,7 @@
 		6E8847A01EDEC0E7001CC971 /* ETH Widget */ = {
 			isa = PBXGroup;
 			children = (
-				6E8847A11EDEC0E8001CC971 /* TodayViewController.swift */,
+				6E8847A11EDEC0E8001CC971 /* TodayEthViewController.swift */,
 				6E8847A31EDEC0E8001CC971 /* MainInterface.storyboard */,
 				6E8847A61EDEC0E8001CC971 /* Info.plist */,
 			);
@@ -604,6 +611,7 @@
 				6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */,
 				6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */,
 				6E60690F1EDC8E190069FF50 /* BitcoinPresenter.swift in Sources */,
+				6E8847B41EDECFBF001CC971 /* CurrencyData.swift in Sources */,
 				6E60690D1EDC8E190069FF50 /* BitcoinInteractor.swift in Sources */,
 				6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */,
 				07DA616A1965E33100E97CC3 /* ViewController.swift in Sources */,
@@ -637,6 +645,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8847B81EDEDF6D001CC971 /* CurrencyData.swift in Sources */,
+				6E8847B71EDEDF4E001CC971 /* ExchangeRate.swift in Sources */,
 				6E6068F41EDC25B30069FF50 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,7 +655,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8847A21EDEC0E8001CC971 /* TodayViewController.swift in Sources */,
+				6E8847B91EDEDF6E001CC971 /* CurrencyData.swift in Sources */,
+				6E8847B51EDEDF47001CC971 /* ExchangeRate.swift in Sources */,
+				6E8847A21EDEC0E8001CC971 /* TodayEthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
