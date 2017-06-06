@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/*
+
 class EthereumCoordinator: Coordinator {
     let navigationController: UINavigationController
     var children: [Coordinator] = []
@@ -35,3 +37,4 @@ class EthereumCoordinator: Coordinator {
 extension EthereumCoordinator: EthereumCoordinatorInput {
 
 }
+*/

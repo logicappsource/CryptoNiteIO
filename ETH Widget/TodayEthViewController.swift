@@ -19,7 +19,10 @@ import Alamofire
 
 class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
     
-     let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
+    
+    let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
+   // let baseURL_Price = URL (string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
+    
     
     @IBOutlet weak var ethPriceLbl: UILabel!
     
@@ -35,8 +38,9 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
             switch response.result {
                 
             case .success (let exchangeRate):
+       
                 
-                //print("Result of the respond API: \(exchangeRate.RAW)")
+                
                 
                for currency in exchangeRate.currencies {
                 
@@ -45,6 +49,11 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
                 /*if let name = exchangeRate.RAW[keyPath: "price.eth"] as? String {
                     print(name)
                 } */
+                
+             print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.currencies)")
+                
+                
+               
                 
                 }
                 

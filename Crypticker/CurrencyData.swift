@@ -11,9 +11,9 @@ import Serpent
 
 struct CurrencyData {
     
-    var eth: [String: [String: AnyObject]] = [:]
-    var dash: [String: [String: AnyObject]] = [:]
-    var xrp: [String: [String: AnyObject]] = [:]
+    var ETH: [String: [String: AnyObject]] = [:]
+    var DASH: [String: [String: AnyObject]] = [:]
+    var XRP: [String: [String: AnyObject]] = [:]
     
     var price = ""
     var high24Hour = ""
@@ -28,12 +28,11 @@ struct CurrencyData {
     
 }
 
-
 extension CurrencyData: Serializable {
     init(dictionary: NSDictionary?) {
-        eth             <== (self, dictionary, "eth")
-        dash            <== (self, dictionary, "dash")
-        xrp             <== (self, dictionary, "xrp")
+        ETH             <== (self, dictionary, "ETH")
+        DASH            <== (self, dictionary, "DASH")
+        XRP             <== (self, dictionary, "XRP")
         price           <== (self, dictionary, "price")
         high24Hour      <== (self, dictionary, "high24Hour")
         low24Hour       <== (self, dictionary, "low24Hour")
@@ -48,9 +47,9 @@ extension CurrencyData: Serializable {
     
     func encodableRepresentation() -> NSCoding {
         let dict = NSMutableDictionary()
-        (dict, "eth")             <== eth
-        (dict, "dash")            <== dash
-        (dict, "xrp")             <== xrp
+        (dict, "ETH")             <== ETH
+        (dict, "DASH")            <== DASH
+        (dict, "XRP")             <== XRP
         (dict, "price")           <== price
         (dict, "high24Hour")      <== high24Hour
         (dict, "low24Hour")       <== low24Hour

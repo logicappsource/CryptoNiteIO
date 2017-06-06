@@ -2,6 +2,7 @@
 
 import UIKit
 import CryptoCurrencyKit
+import UserNotifications
 
 class ViewController: CurrencyDataViewController {
   
@@ -22,7 +23,22 @@ class ViewController: CurrencyDataViewController {
     
     priceOnDayLabel.text = ""
     dayLabel.text = ""
-  }
+    
+    
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
+        
+                if granted {
+                    print("Authroized access granted")
+                } else {
+                    print(error?.localizedDescription)
+                }
+        })
+    
+    
+    
+    }
+    
+    
   
   override func viewWillAppear(_ animated: Bool)  {
     super.viewWillAppear(animated)
