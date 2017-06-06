@@ -24,7 +24,7 @@ class ViewController: CurrencyDataViewController {
     priceOnDayLabel.text = ""
     dayLabel.text = ""
     
-    
+    //Comment out
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (granted, error) in
         
                 if granted {

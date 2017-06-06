@@ -30,6 +30,11 @@
 		6E6069121EDC8E190069FF50 /* BitcoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E60690B1EDC8E190069FF50 /* BitcoinViewController.xib */; };
 		6E82FAA21EE1984F0045FB7A /* EthereumCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E82FAA11EE1984F0045FB7A /* EthereumCurrency.swift */; };
 		6E82FAA41EE1BA540045FB7A /* bitcoingif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E82FAA31EE1BA540045FB7A /* bitcoingif.gif */; };
+		6E82FAAB1EE6B7920045FB7A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E82FAAA1EE6B7920045FB7A /* UserNotifications.framework */; };
+		6E82FAAD1EE6B7920045FB7A /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E82FAAC1EE6B7920045FB7A /* UserNotificationsUI.framework */; };
+		6E82FAB01EE6B7920045FB7A /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E82FAAF1EE6B7920045FB7A /* NotificationViewController.swift */; };
+		6E82FAB31EE6B7920045FB7A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E82FAB11EE6B7920045FB7A /* MainInterface.storyboard */; };
+		6E82FAB71EE6B7920045FB7A /* BitcoinContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E82FAA91EE6B7920045FB7A /* BitcoinContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E88476C1EDC951A001CC971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476B1EDC951A001CC971 /* Alamofire.framework */; };
 		6E88476E1EDC951C001CC971 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476D1EDC951C001CC971 /* Cashier.framework */; };
 		6E8847701EDC9520001CC971 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E88476F1EDC9520001CC971 /* Serpent.framework */; };
@@ -99,6 +104,13 @@
 			remoteGlobalIDString = 6E6068EF1EDC25B30069FF50;
 			remoteInfo = "BTC Widget";
 		};
+		6E82FAB51EE6B7920045FB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DA615A1965E33100E97CC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E82FAA81EE6B7920045FB7A;
+			remoteInfo = BitcoinContentExtension;
+		};
 		6E8847A71EDEC0E8001CC971 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07DA615A1965E33100E97CC3 /* Project object */;
@@ -127,6 +139,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				6E6068FB1EDC25B30069FF50 /* BTC Widget.appex in Embed App Extensions */,
+				6E82FAB71EE6B7920045FB7A /* BitcoinContentExtension.appex in Embed App Extensions */,
 				6E8847A91EDEC0E8001CC971 /* ETH Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -158,6 +171,12 @@
 		6E60690B1EDC8E190069FF50 /* BitcoinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitcoinViewController.xib; sourceTree = "<group>"; };
 		6E82FAA11EE1984F0045FB7A /* EthereumCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumCurrency.swift; sourceTree = "<group>"; };
 		6E82FAA31EE1BA540045FB7A /* bitcoingif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bitcoingif.gif; sourceTree = "<group>"; };
+		6E82FAA91EE6B7920045FB7A /* BitcoinContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BitcoinContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E82FAAA1EE6B7920045FB7A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		6E82FAAC1EE6B7920045FB7A /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		6E82FAAF1EE6B7920045FB7A /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		6E82FAB21EE6B7920045FB7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6E82FAB41EE6B7920045FB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E88476B1EDC951A001CC971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		6E88476D1EDC951C001CC971 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cashier.framework; path = Carthage/Build/iOS/Cashier.framework; sourceTree = "<group>"; };
 		6E88476F1EDC9520001CC971 /* Serpent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Serpent.framework; path = Carthage/Build/iOS/Serpent.framework; sourceTree = "<group>"; };
@@ -226,6 +245,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E82FAA61EE6B7920045FB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E82FAAD1EE6B7920045FB7A /* UserNotificationsUI.framework in Frameworks */,
+				6E82FAAB1EE6B7920045FB7A /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E88479B1EDEC0E7001CC971 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +276,7 @@
 				07DA618A1965E3A600E97CC3 /* CryptoCurrencyKit */,
 				6E6068F21EDC25B30069FF50 /* BTC Widget */,
 				6E8847A01EDEC0E7001CC971 /* ETH Widget */,
+				6E82FAAE1EE6B7920045FB7A /* BitcoinContentExtension */,
 				8331C02B19677E9000FBA23E /* Frameworks */,
 				07DA61631965E33100E97CC3 /* Products */,
 			);
@@ -260,6 +289,7 @@
 				07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */,
 				6E6068F01EDC25B30069FF50 /* BTC Widget.appex */,
 				6E88479E1EDEC0E7001CC971 /* ETH Widget.appex */,
+				6E82FAA91EE6B7920045FB7A /* BitcoinContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +376,16 @@
 			name = Bitcoin;
 			sourceTree = "<group>";
 		};
+		6E82FAAE1EE6B7920045FB7A /* BitcoinContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6E82FAAF1EE6B7920045FB7A /* NotificationViewController.swift */,
+				6E82FAB11EE6B7920045FB7A /* MainInterface.storyboard */,
+				6E82FAB41EE6B7920045FB7A /* Info.plist */,
+			);
+			path = BitcoinContentExtension;
+			sourceTree = "<group>";
+		};
 		6E8847761EDCA19B001CC971 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +452,8 @@
 				6E88476D1EDC951C001CC971 /* Cashier.framework */,
 				6E88476B1EDC951A001CC971 /* Alamofire.framework */,
 				8331C02C19677E9000FBA23E /* NotificationCenter.framework */,
+				6E82FAAA1EE6B7920045FB7A /* UserNotifications.framework */,
+				6E82FAAC1EE6B7920045FB7A /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -460,6 +502,7 @@
 				07DA61A11965E3A600E97CC3 /* PBXTargetDependency */,
 				6E6068FA1EDC25B30069FF50 /* PBXTargetDependency */,
 				6E8847A81EDEC0E8001CC971 /* PBXTargetDependency */,
+				6E82FAB61EE6B7920045FB7A /* PBXTargetDependency */,
 			);
 			name = CryptoNiteIO;
 			productName = Crypticker;
@@ -500,6 +543,23 @@
 			name = "BTC Widget";
 			productName = "BTC Widget";
 			productReference = 6E6068F01EDC25B30069FF50 /* BTC Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6E82FAA81EE6B7920045FB7A /* BitcoinContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E82FAB81EE6B7920045FB7A /* Build configuration list for PBXNativeTarget "BitcoinContentExtension" */;
+			buildPhases = (
+				6E82FAA51EE6B7920045FB7A /* Sources */,
+				6E82FAA61EE6B7920045FB7A /* Frameworks */,
+				6E82FAA71EE6B7920045FB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitcoinContentExtension;
+			productName = BitcoinContentExtension;
+			productReference = 6E82FAA91EE6B7920045FB7A /* BitcoinContentExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		6E88479D1EDEC0E7001CC971 /* ETH Widget */ = {
@@ -543,6 +603,11 @@
 						DevelopmentTeam = JWZKK84V7N;
 						ProvisioningStyle = Automatic;
 					};
+					6E82FAA81EE6B7920045FB7A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JWZKK84V7N;
+						ProvisioningStyle = Automatic;
+					};
 					6E88479D1EDEC0E7001CC971 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = JWZKK84V7N;
@@ -567,6 +632,7 @@
 				07DA61881965E3A600E97CC3 /* CryptoCurrencyKit */,
 				6E6068EF1EDC25B30069FF50 /* BTC Widget */,
 				6E88479D1EDEC0E7001CC971 /* ETH Widget */,
+				6E82FAA81EE6B7920045FB7A /* BitcoinContentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -598,6 +664,14 @@
 			files = (
 				6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */,
 				6E6069001EDC768F0069FF50 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E82FAA71EE6B7920045FB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E82FAB31EE6B7920045FB7A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +777,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E82FAA51EE6B7920045FB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E82FAB01EE6B7920045FB7A /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E88479A1EDEC0E7001CC971 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -731,6 +813,11 @@
 			target = 6E6068EF1EDC25B30069FF50 /* BTC Widget */;
 			targetProxy = 6E6068F91EDC25B30069FF50 /* PBXContainerItemProxy */;
 		};
+		6E82FAB61EE6B7920045FB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E82FAA81EE6B7920045FB7A /* BitcoinContentExtension */;
+			targetProxy = 6E82FAB51EE6B7920045FB7A /* PBXContainerItemProxy */;
+		};
 		6E8847A81EDEC0E8001CC971 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E88479D1EDEC0E7001CC971 /* ETH Widget */;
@@ -751,6 +838,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E6068F61EDC25B30069FF50 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		6E82FAB11EE6B7920045FB7A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E82FAB21EE6B7920045FB7A /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -992,6 +1087,46 @@
 			};
 			name = Release;
 		};
+		6E82FAB91EE6B7920045FB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JWZKK84V7N;
+				INFOPLIST_FILE = BitcoinContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoNiteIO.BitcoinContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6E82FABA1EE6B7920045FB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JWZKK84V7N;
+				INFOPLIST_FILE = BitcoinContentExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoNiteIO.BitcoinContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		6E8847AB1EDEC0E8001CC971 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1078,6 +1213,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6E82FAB81EE6B7920045FB7A /* Build configuration list for PBXNativeTarget "BitcoinContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E82FAB91EE6B7920045FB7A /* Debug */,
+				6E82FABA1EE6B7920045FB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		6E8847AA1EDEC0E8001CC971 /* Build configuration list for PBXNativeTarget "ETH Widget" */ = {
 			isa = XCConfigurationList;

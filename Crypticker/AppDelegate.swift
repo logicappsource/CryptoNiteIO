@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     coordinator.start()     
     */
+    
+    UNUserNotificationCenter.current().delegate = self
+    
+    configureUserNotifications()
     
     return true
   }
@@ -56,7 +61,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
+    private func configureUserNotifications() {
+        
+        let favAction = UNNotificationAction(identifier: "action one", title: "action one", options: [])
+        let dissmisAction = UNNotificationAction(identifier: "dismiss", title: "Dissmis", options: [])
+        
+        let category = UNNotificationCategory(identifier: "bitcoinNotificationCategory", actions: [favAction, dissmisAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+    
+        
+    }
+    
+}
+
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Response received for \(response.actionIdentifier)")
+        completionHandler()
+        
+    }
+    
     
     
 }
+
 

@@ -55,6 +55,10 @@ class TempEthereumViewController: UIViewController {
         
         let notification = UNMutableNotificationContent()
         
+        //Only for EXTENSION 
+        notification.categoryIdentifier = "bitcoinNotificationCategory"
+        
+        
         notification.title = "New Price evalutaiton"
         notification.subtitle = "Bitcoin raised + 5%"
         notification.body = " New Price Notification"
@@ -103,8 +107,7 @@ class TempEthereumViewController: UIViewController {
             }
         }
         
-        
-        
+    
         print("new Ethereum VC")
         
       
@@ -114,6 +117,8 @@ class TempEthereumViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
     
