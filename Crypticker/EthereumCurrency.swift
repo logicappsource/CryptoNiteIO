@@ -63,3 +63,14 @@ extension EthereumCurrency: Serializable {
         return dict
     }
 }
+
+/*
+extension EthereumCurrency {
+    var currency: [EthereumCurrency] {
+        return ethereum.values.map({ (values) -> EthereumCurrency in
+            return EthereumCurrency(dictionary:  value as NSDictionary)
+        })
+    }
+
+}
+ */
