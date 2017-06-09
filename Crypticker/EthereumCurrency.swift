@@ -9,6 +9,8 @@
 import Foundation
 import Serpent
 
+
+
 struct EthereumCurrency {
     
     var id = ""

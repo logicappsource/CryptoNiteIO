@@ -18,7 +18,6 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
     var lineWidth: CGFloat = 2.0
 
     @IBOutlet weak var priceSelectionVibrancyView: UIVisualEffectView!
-    
     @IBOutlet weak var vibrancyView: UIVisualEffectView!
         
     override func viewDidLoad() {
@@ -102,8 +101,6 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
     }
     
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

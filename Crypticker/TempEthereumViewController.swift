@@ -21,10 +21,19 @@ class TempEthereumViewController: UIViewController {
     @IBOutlet weak var PriceOnDayLabel: UILabel!
     @IBOutlet weak var PriceChangeLabel: UILabel!
     @IBOutlet weak var PriceLabel: UILabel!
+
+    @IBOutlet weak var label: UILabel! // test label
     
-    @IBOutlet weak var label: UILabel!
+    
+    // Hardcoded Temp for testing - (Modify to real price from API )
+    var btcPrice: Double  = 10.00
+    var btcCachedPrice: Double = 20.00
     
     
+    //Cachhing price
+    //let ethPriceCached = NSCache<NSString, Double>()
+    
+   
     
     /* Later re-organie model -> coordinator -> Clean Arcitecture */
     
@@ -35,9 +44,7 @@ class TempEthereumViewController: UIViewController {
     //4. algorihtmen to calcuæate average, and with timer
     //5. check if price is going down or up in percentage
     //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
-    
-    
-    //Change notification to 2 outcome ,  + ,  -
+    //Outcome ->   + ,  -
 
     
     
@@ -57,7 +64,7 @@ class TempEthereumViewController: UIViewController {
     let baseURLEthereum = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
     
     func makeEthereumDataRequest(completion: @escaping (DataResponse<[EthereumCurrency]>) -> Void) {
-        print("Ethereum Data Repsonse ")
+        //print("Ethereum Data Repsonse ")
         request(baseURL_Ethereum!).responseSerializable(completion)
     }
     
@@ -68,17 +75,19 @@ class TempEthereumViewController: UIViewController {
                 
             case .success(let ethereumData):
                 
-                for eth in ethereumData {
-
-                    print("All Currency Names \(eth.name) \n ")
-                    print("All Ranks \(eth.rank)")
-                    print("Percent Change_1 Hour \(eth.percent_change_1h)")
-                    print("Percent Change_24 Hours \(eth.percent_change_24h)")
-                    print("Percent Change_7 Days \(eth.percent_change_7d)")
-                    print("Crpyto Price in USD \(eth.price_usd)")
-                    print("Total Supply  \(eth.availible_supply)")
-                
-                    //CHeck for update in price and compare old price (global var) to new request price (cache)
+                for currency in ethereumData {
+                    
+                    if(currency.name == "Ethereum") {
+                        print("Ethereum Data  \n" )
+                        print("Currency Name:  \(currency.name)")
+                        print("Ranking: \(currency.rank)")
+                        print("% Change_1 Hour: \(currency.percent_change_1h)")
+                        print("% Change_24 Hours: \(currency.percent_change_24h)")
+                        print("% Change_7 Days: \(currency.percent_change_7d)")
+                        print("Crypto Price in USD: \(currency.price_usd)")
+                    }
+                    
+                                       //CHeck for update in price and compare old price (global var) to new request price (cache)
                      self.priceCompareFromCache()
                 }
                 
@@ -88,13 +97,6 @@ class TempEthereumViewController: UIViewController {
         }
         
     }
-    
-
-
-    
-    //Temp for testing - (Modify to real price from API )
-    var btcPrice: Double  = 10.00
-    var btcCachedPrice: Double = 20.00
     
 
     //Compare old Price(cached) to new Request
@@ -202,9 +204,7 @@ class TempEthereumViewController: UIViewController {
 
         updateUI()
         requestEthereumData()
-      
-        
-         //registerBackgroundTask()
+        //registerBackgroundTask()
         
     }
 
@@ -216,7 +216,7 @@ class TempEthereumViewController: UIViewController {
     
     
     
-/*
+  /*
     func updateDayLabel(_ price: EthereumPrice) {
      
     }
@@ -224,7 +224,6 @@ class TempEthereumViewController: UIViewController {
     
 
     
-
 
 }
 

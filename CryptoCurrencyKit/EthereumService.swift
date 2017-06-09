@@ -13,12 +13,4 @@ class EthereumService {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
 }

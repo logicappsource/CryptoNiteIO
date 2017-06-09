@@ -12,17 +12,15 @@ import CryptoCurrencyKit
 import Serpent
 import Alamofire
 
-//Refresh API CAll on refresh -> touch down
 
 class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
     
     
-    let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
+let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
    // let baseURL_Price = URL (string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
     
     
     @IBOutlet weak var ethPriceLbl: UILabel!
-    
     @IBOutlet weak var ethPriceChangeLbl: UILabel!
 
     
@@ -36,18 +34,8 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
                 
             case .success (let exchangeRate):
        
-                
                for currency in exchangeRate.currencies {
-                
-                
-                    // print("Currenct XRP \(exchangeRate.currencies)")
-                /*if let name = exchangeRate.RAW[keyPath: "price.eth"] as? String {
-                    print(name)
-                } */
-                
-             print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.currencies)")
-                
-                
+                print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.currencies)")
                 
                 }
                 
@@ -59,15 +47,6 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
         
     }
     
-    
-    /* API data respond
-     if let Ethereum = currency.eth["USD"] as? Dictionary <String, Any> {
-     print(Ethereum)
-     }
-     //print("Currency Data from ETHEREUM: \(currency.eth)")
-     //print("Currency Data from DASH: \(currency.change24Hour)")
-     */
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
