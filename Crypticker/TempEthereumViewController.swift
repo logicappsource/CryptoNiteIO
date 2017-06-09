@@ -12,8 +12,9 @@ import UserNotifications
 import Serpent
 import Alamofire
 
+
+
 class TempEthereumViewController: UIViewController {
-    
     
     
     @IBOutlet weak var DayLabel: UILabel!
@@ -21,22 +22,44 @@ class TempEthereumViewController: UIViewController {
     @IBOutlet weak var PriceChangeLabel: UILabel!
     @IBOutlet weak var PriceLabel: UILabel!
     
+    @IBOutlet weak var label: UILabel!
     
+    
+    
+    /* Later re-organie model -> coordinator -> Clean Arcitecture */
     
     //1. Model
     //2. Make API request -> Store in dict<>
     //3. request pr timer
     
-    /* Later Move to model -> + coordinator*/
+    //4. algorihtmen to calcuæate average, and with timer
+    //5. check if price is going down or up in percentage
+    //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
+    
+    
+    //Change notification to 2 outcome ,  + ,  -
+
+    
+    
+    /***** Background fetch ****/
+    func fetch(_ completion: () -> Void ) {
+        completion()
+    }
+    
+    func updateUI() {
+        guard label != nil  else {
+            return
+        }
+    }
+    
+    
     
     let baseURLEthereum = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
-    
     
     func makeEthereumDataRequest(completion: @escaping (DataResponse<[EthereumCurrency]>) -> Void) {
         print("Ethereum Data Repsonse ")
         request(baseURL_Ethereum!).responseSerializable(completion)
     }
-    
     
     
     func requestEthereumData(){
@@ -46,40 +69,62 @@ class TempEthereumViewController: UIViewController {
             case .success(let ethereumData):
                 
                 for eth in ethereumData {
-                   // print("Ethereum Currency:   \(eth.last_24h_volume_usd)")
+
                     print("All Currency Names \(eth.name) \n ")
                     print("All Ranks \(eth.rank)")
                     print("Percent Change_1 Hour \(eth.percent_change_1h)")
                     print("Percent Change_24 Hours \(eth.percent_change_24h)")
                     print("Percent Change_7 Days \(eth.percent_change_7d)")
-
-                    
+                    print("Crpyto Price in USD \(eth.price_usd)")
+                    print("Total Supply  \(eth.availible_supply)")
+                
+                    //CHeck for update in price and compare old price (global var) to new request price (cache)
+                     self.priceCompareFromCache()
                 }
                 
             case .failure(let error):
                 print("Ethereum reqeust failed: \(error.localizedDescription)")
-                
             }
         }
         
     }
     
-    
+
 
     
-    //1. algorihtmen to calcuæate average, and with timer
-    //2. check if price is going down or up in percentage 
-    //3.. if >< 5 %  then Display notification 
+    //Temp for testing - (Modify to real price from API )
+    var btcPrice: Double  = 10.00
+    var btcCachedPrice: Double = 20.00
     
-    
-    
-    //Call this method if price goes up ->
-    //scheduleNotification(inSeconds: 5, completion: { success in
 
+    //Compare old Price(cached) to new Request
+    func priceCompareFromCache() {
+        
+        if (btcPrice >= btcCachedPrice ) {
+            updateNotificationPriceChangeUp()
+        } else {
+            updateNotificationPriceChangeDown()
+        }
+    }
     
     
+        //Updates Notification to User if Price - UP
+    func updateNotificationPriceChangeUp() {
+        scheduleNotification(inSeconds: 1) { (true) in
+           // print("Notification for BitcoinPrice - UP")
+        }
+    }
     
+        //Updates Notification to User if Price - DOWN
+    func updateNotificationPriceChangeDown() {
+        scheduleNotification(inSeconds: 1) { (true) in
+            //print("Notification for Bitcoin Price -  DOWN ")
+        }
+    }
     
+  
+
+
     @IBAction func btnNotifiTest(_ sender: Any) {
         scheduleNotification(inSeconds: 5, completion: { success in
             
@@ -94,7 +139,6 @@ class TempEthereumViewController: UIViewController {
     
     
     func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
-        
         
         // Add an attachement
         let bitcoinGif = "bitcoingif"
@@ -119,11 +163,10 @@ class TempEthereumViewController: UIViewController {
         notification.title = "New Price evalutaiton"
         notification.subtitle = "Bitcoin raised + 5%"
         notification.body = " New Price Notification"
-        
+        notification.sound = UNNotificationSound(named: "upsound.waw")
         notification.attachments = [attachment]
         
-        
-        
+
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
         
@@ -142,16 +185,6 @@ class TempEthereumViewController: UIViewController {
     
     
     
-    
-    /* Implementaiton*/
-    //Make ETH api call 
-    //request Price
-    //display price 
-    //Jlinechart implement
-    //Refresh and fetch price
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -165,10 +198,14 @@ class TempEthereumViewController: UIViewController {
         }
         
     
-        print("new Ethereum VC")
-        
+        print("tempEthereum VC - Default")
+
+        updateUI()
         requestEthereumData()
       
+        
+         //registerBackgroundTask()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -179,26 +216,52 @@ class TempEthereumViewController: UIViewController {
     
     
     
-    
+/*
     func updateDayLabel(_ price: EthereumPrice) {
      
     }
-    
-    
-    
-    
+  */
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 
 
 }
+
+
+
+
+
+/***-----BACKGROUND TASK----------
+ 
+ //Initilaize background mode
+ var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+ 
+ 
+ func registerBackgroundTask() {
+ backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+ self?.endBackgroundTask()
+ }
+ assert(backgroundTask != UIBackgroundTaskInvalid)
+ }
+ 
+ 
+ 
+ func endBackgroundTask() {
+ print("Background task ended ")
+ 
+ UIApplication.shared.endBackgroundTask(backgroundTask)
+ backgroundTask = UIBackgroundTaskInvalid
+ 
+ if (backgroundTask != UIBackgroundTaskInvalid) {
+ endBackgroundTask()
+ }
+ }
+ 
+ 
+ func setMinimumBackgroundFetchInterval(_:) {
+ 
+ }
+ 
+ 
+ -----BACKGROUND TASK--END-------******/

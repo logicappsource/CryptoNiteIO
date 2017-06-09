@@ -42,6 +42,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     
     func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
         if response.actionIdentifier == "firstBump" {
+            
             completion(.dismissAndForwardAction)
         } else if response.actionIdentifier == "dismiss" {
             completion(.dismissAndForwardAction)

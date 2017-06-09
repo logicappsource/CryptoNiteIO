@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //var coordinator: AppCoordinator!
   var window: UIWindow?
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-    // Override point for customization after application launch.
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool { // Override point for customization after application launch.
     
+
     //Coordinator = AppCoordinator(window: UIWindow(frame: UIScreen.main.bounds))
   /*
     window = UIWindow(frame: UIScreen.main.bounds)
@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     coordinator.start()     
     */
+    
+    //Background Fetch
+    UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
     
     UNUserNotificationCenter.current().delegate = self
     
@@ -59,18 +62,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if let tabBarController = window?.rootViewController as? UITabBarController,
+        let viewControllers = tabBarController.viewControllers
+        {
+            for viewController in viewControllers {
+                if let TempEthereumViewController = viewController as? TempEthereumViewController {
+                    TempEthereumViewController.fetch {
+                        TempEthereumViewController.updateUI()
+                        completionHandler(.newData)
+                    }
+                }
+            }
+        }
+    }
 
     
     private func configureUserNotifications() {
         
-        let favAction = UNNotificationAction(identifier: "action one", title: "action one", options: [])
-        let dissmisAction = UNNotificationAction(identifier: "dismiss", title: "Dissmis", options: [])
+        let favAction = UNNotificationAction(identifier: "Keep Notifying me", title: "Keep Notifying me", options: [])
+        let dissmisAction = UNNotificationAction(identifier: "Don´t Disturb", title: "Don´t Disturb", options: [])
         
         let category = UNNotificationCategory(identifier: "bitcoinNotificationCategory", actions: [favAction, dissmisAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
     
         
     }
+    
+    
+    
+    
     
 }
 

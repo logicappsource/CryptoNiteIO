@@ -9,6 +9,9 @@
 import Foundation
 import Alamofire
 
+
+
+/*
 protocol CurrencyRepository: class {
     func listAllCryptoCurrencies(completion: @escaping (DataResponse<[CryptoCurrencies]>) -> Void)
     
@@ -18,3 +21,4 @@ protocol EthereumRepository: class {
     func listAllEthData(completion: @escaping(DataResponse<[EthereumCurrency]>) -> Void)
 }
 
+*/

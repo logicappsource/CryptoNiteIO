@@ -31,6 +31,9 @@ class ServerRepository {
 
 
 
+/*
+
+
 extension ServerRepository: CurrencyRepository {
     func listAllCryptoCurrencies(completion: @escaping (DataResponse<[CryptoCurrencies]>) -> Void) {
         manager
@@ -39,6 +42,9 @@ extension ServerRepository: CurrencyRepository {
             })
     }
 
+ 
+*/
+ 
     
     /*
 extension ServerRepository: EthereumRepository {
@@ -56,4 +62,4 @@ extension ServerRepository: EthereumRepository {
     
 
     
-}
+

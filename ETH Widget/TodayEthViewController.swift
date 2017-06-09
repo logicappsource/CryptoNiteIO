@@ -12,10 +12,7 @@ import CryptoCurrencyKit
 import Serpent
 import Alamofire
 
-
-//Refresh API CAll on refresh -> touch down 
-
-
+//Refresh API CAll on refresh -> touch down
 
 class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
     
@@ -40,8 +37,6 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
             case .success (let exchangeRate):
        
                 
-                
-                
                for currency in exchangeRate.currencies {
                 
                 
@@ -53,7 +48,6 @@ class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
              print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.currencies)")
                 
                 
-               
                 
                 }
                 
