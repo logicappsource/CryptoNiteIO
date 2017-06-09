@@ -32,4 +32,6 @@
  -----------------------------------------------------------------------------
   -> Idea is to follow with other cryptocurrency using specific API data 
   -> With independendt Clean Architecture
+  
+UI Screen shots of the Application here ---> https://github.com/logicappsource/CryptoNiteIO/wiki/Concept-of-functionality
    -----------------------------------------------------------------------------
