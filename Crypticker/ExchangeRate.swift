@@ -12,8 +12,6 @@ import Foundation
 import Serpent
 import Foundation
 
-
-
 struct ExchangeRate {
     
     var id = ""

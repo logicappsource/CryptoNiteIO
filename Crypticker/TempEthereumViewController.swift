@@ -6,6 +6,23 @@
 //  Copyright © 2017 LogicAppSourceIO. All rights reserved.
 //
 
+
+//Cachhing price
+//let ethPriceCached = NSCache<NSString, Double>()
+
+
+
+/* Later re-organie model -> coordinator -> Clean Arcitecture */
+
+//1. Model
+//2. Make API request -> Store in dict<>
+//3. request pr timer
+
+//4. algorihtmen to calcuæate average, and with timer
+//5. check if price is going down or up in percentage
+//6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
+//Outcome ->   + ,  -
+
 import UIKit
 import CryptoCurrencyKit
 import UserNotifications
@@ -14,43 +31,38 @@ import Alamofire
 
 
 
-class TempEthereumViewController: UIViewController {
+class TempEthereumViewController: CurrencyDataViewController {
     
+    let baseURLEthereum = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
+    let dateFormatter: DateFormatter
+    
+
+
+    // Hardcoded Temp test
+    var btcPrice: Double  = 10.00
+    var btcCachedPrice: Double = 20.00
+    
+    required init?(coder aDecoder: NSCoder) {
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE M/d"
+        
+        super.init(coder: aDecoder)
+    }
     
     @IBOutlet weak var DayLabel: UILabel!
     @IBOutlet weak var PriceOnDayLabel: UILabel!
     @IBOutlet weak var PriceChangeLabel: UILabel!
     @IBOutlet weak var PriceLabel: UILabel!
-
-    @IBOutlet weak var label: UILabel! // test label
-    
-    
-    // Hardcoded Temp for testing - (Modify to real price from API )
-    var btcPrice: Double  = 10.00
-    var btcCachedPrice: Double = 20.00
-    
-    
     @IBOutlet weak var priceLblEth: UILabel!
     @IBOutlet weak var priceChangeLblEth: UILabel!
     
     
+    @IBOutlet weak var label: UILabel! // test label
     
-    //Cachhing price
-    //let ethPriceCached = NSCache<NSString, Double>()
+    func updateDayLabel(_ price: EthereumPrice) {
+        DayLabel.text = dateFormatter.string(from: price.time)
+    }
     
-   
-    
-    /* Later re-organie model -> coordinator -> Clean Arcitecture */
-    
-    //1. Model
-    //2. Make API request -> Store in dict<>
-    //3. request pr timer
-    
-    //4. algorihtmen to calcuæate average, and with timer
-    //5. check if price is going down or up in percentage
-    //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
-    //Outcome ->   + ,  -
-
     
     
     /***** Background fetch ****/
@@ -64,12 +76,9 @@ class TempEthereumViewController: UIViewController {
         }
     }
     
-    
-    
-    let baseURLEthereum = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
+
     
     func makeEthereumDataRequest(completion: @escaping (DataResponse<[EthereumCurrency]>) -> Void) {
-        //print("Ethereum Data Repsonse ")
         request(baseURL_Ethereum!).responseSerializable(completion)
     }
     
@@ -83,21 +92,10 @@ class TempEthereumViewController: UIViewController {
                 for currency in ethereumData {
                     
                     if(currency.name == "Ethereum") {
-                        /*
-                        print("Ethereum Data  \n" )
-                        print("Currency Name:  \(currency.name)")
-                        print("Ranking: \(currency.rank)")
-                        print("% Change_1 Hour: \(currency.percent_change_1h)")
-                        print("% Change_24 Hours: \(currency.percent_change_24h)")
-                        print("% Change_7 Days: \(currency.percent_change_7d)")
-                        print("Crypto Price in USD: \(currency.price_usd)")
-                        */
-                        
-                        
+                    
                         self.priceLblEth.text = " $ \(currency.price_usd)"
                         self.priceChangeLblEth.text = "% \(currency.percent_change_1h) "
                         
-    
                     }
                     
                 //CHeck for update in price and compare old price (global var) to new request price (cache)
@@ -181,7 +179,6 @@ class TempEthereumViewController: UIViewController {
         notification.sound = UNNotificationSound(named: "upsound.waw")
         notification.attachments = [attachment]
         
-
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
         
@@ -199,7 +196,6 @@ class TempEthereumViewController: UIViewController {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -211,10 +207,7 @@ class TempEthereumViewController: UIViewController {
                 print(error?.localizedDescription)
             }
         }
-        
-    
         print("tempEthereum VC - Default")
-
         updateUI()
         requestEthereumData()
         //registerBackgroundTask()
