@@ -51,8 +51,6 @@ let baseURL_Price = URL (string: "https://api.coinmarketcap.com/v1/ticker/?conve
         }
         
         
-        
-        
     }
     
     

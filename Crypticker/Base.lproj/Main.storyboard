@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sCC-3F-ez0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RGS-Un-Kbb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -151,13 +151,6 @@
                                     <action selector="btnNotifiTest:" destination="sCC-3F-ez0" eventType="touchUpInside" id="Eg6-By-fOD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pin-K5-lwn">
-                                <rect key="frame" x="158" y="251" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.42352941179999998" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -197,7 +190,6 @@
                         <outlet property="PriceChangeLabel" destination="gfw-ud-ypL" id="wms-6W-7cQ"/>
                         <outlet property="PriceLabel" destination="npX-gn-KKX" id="yPD-mB-PxF"/>
                         <outlet property="PriceOnDayLabel" destination="gPt-KV-j3E" id="iV4-jb-SmI"/>
-                        <outlet property="label" destination="pin-K5-lwn" id="oWy-37-akf"/>
                         <outlet property="priceChangeLblEth" destination="gfw-ud-ypL" id="v6O-SJ-nsg"/>
                         <outlet property="priceLblEth" destination="npX-gn-KKX" id="sEn-BO-8hU"/>
                     </connections>
