@@ -10,6 +10,7 @@ import UIKit
 import NotificationCenter
 import CryptoCurrencyKit
 
+//Notification for price change
 
 class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
 

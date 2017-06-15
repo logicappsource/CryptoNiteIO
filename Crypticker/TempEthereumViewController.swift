@@ -6,10 +6,9 @@
 //  Copyright © 2017 LogicAppSourceIO. All rights reserved.
 //
 
-
-//Cachhing price
+/*****  IMPLEMENT LATER ******/
+//Cach price
 //let ethPriceCached = NSCache<NSString, Double>()
-
 
 
 /* Later re-organie model -> coordinator -> Clean Arcitecture */
@@ -21,8 +20,8 @@
 //4. algorihtmen to calcuæate average, and with timer
 //5. check if price is going down or up in percentage
 //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
-//Outcome ->   + ,  -
 
+//import Cashier
 import UIKit
 import CryptoCurrencyKit
 import UserNotifications
@@ -36,8 +35,6 @@ class TempEthereumViewController: CurrencyDataViewController {
     let baseURLEthereum = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
     let dateFormatter: DateFormatter
     
-
-
     // Hardcoded Temp test
     var btcPrice: Double  = 10.00
     var btcCachedPrice: Double = 20.00
@@ -56,13 +53,12 @@ class TempEthereumViewController: CurrencyDataViewController {
     @IBOutlet weak var priceLblEth: UILabel!
     @IBOutlet weak var priceChangeLblEth: UILabel!
     
-    
     @IBOutlet weak var label: UILabel! // test label
+    
     
     func updateDayLabel(_ price: EthereumPrice) {
         DayLabel.text = dateFormatter.string(from: price.time)
     }
-    
     
     
     /***** Background fetch ****/
@@ -83,6 +79,8 @@ class TempEthereumViewController: CurrencyDataViewController {
     }
     
     
+
+    
     func requestEthereumData(){
         makeEthereumDataRequest{ (response) in
             switch response.result {
@@ -92,14 +90,26 @@ class TempEthereumViewController: CurrencyDataViewController {
                 for currency in ethereumData {
                     
                     if(currency.name == "Ethereum") {
-                    
                         self.priceLblEth.text = " $ \(currency.price_usd)"
-                        self.priceChangeLblEth.text = "% \(currency.percent_change_1h) "
+                        self.priceChangeLblEth.text = "% \(currency.percent_change_1h)"
+                        
+                        //Cast -> Double
+                        if let newEthPercent_Change_1h_double = NumberFormatter().number(from: currency.percent_change_1h)?.doubleValue {
+                            print("\n New ETH Price %  \(newEthPercent_Change_1h_double)")
+                            
+                        if(abs(newEthPercent_Change_1h_double) >= 1.0) {  //Compare Price
+                                self.updateNotificationPriceChangeUp()
+                        } else if (abs(newEthPercent_Change_1h_double) <= -1.0) {
+                                self.updateNotificationPriceChangeDown()
+                            }
+                            
+                        } else {
+                            print("value is other" )
+                        }
+                        
+
                         
                     }
-                    
-                //CHeck for update in price and compare old price (global var) to new request price (cache)
-                     self.priceCompareFromCache()
                 }
                 
             case .failure(let error):
@@ -110,33 +120,23 @@ class TempEthereumViewController: CurrencyDataViewController {
     }
     
 
-    //Compare old Price(cached) to new Request
-    func priceCompareFromCache() {
-        
-        if (btcPrice >= btcCachedPrice ) {
-            updateNotificationPriceChangeUp()
-        } else {
-            updateNotificationPriceChangeDown()
-        }
-    }
     
     
         //Updates Notification to User if Price - UP
     func updateNotificationPriceChangeUp() {
+        print("Price Alert Notified - Ethereum Price increasd more than %5 ")
         scheduleNotification(inSeconds: 1) { (true) in
-           // print("Notification for BitcoinPrice - UP")
         }
     }
     
         //Updates Notification to User if Price - DOWN
     func updateNotificationPriceChangeDown() {
+        print("Price Alert Notificed - Ethereum Price dropped more than %5 ")
         scheduleNotification(inSeconds: 1) { (true) in
-            //print("Notification for Bitcoin Price -  DOWN ")
         }
     }
     
   
-
 
     @IBAction func btnNotifiTest(_ sender: Any) {
         scheduleNotification(inSeconds: 5, completion: { success in
@@ -149,6 +149,8 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         })
     }
+    
+    
     
     
     func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
@@ -164,9 +166,8 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         
         var attachment: UNNotificationAttachment
-        attachment = try! UNNotificationAttachment(identifier: "bitcoinNotification", url: imageBitcoinUrl, options: .none)
+        attachment = try! UNNotificationAttachment(identifier: "ethereumNotification", url: imageBitcoinUrl, options: .none)
  
-        
         let notification = UNMutableNotificationContent()
         
         //Only for EXTENSION 
@@ -182,7 +183,7 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
         
-        let request = UNNotificationRequest(identifier: "bitcoinNotification", content: notification, trigger: notificationTrigger)
+        let request = UNNotificationRequest(identifier: "ethereumNotification", content: notification, trigger: notificationTrigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
             if error != nil {
@@ -219,15 +220,10 @@ class TempEthereumViewController: CurrencyDataViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-    
 
     
 
 }
-
-
 
 
 
