@@ -15,6 +15,8 @@
 		07DA619E1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		07DA619F1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */; };
+		6E3D08A81EF2B4F600BFC2A5 /* ethereum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08A71EF2B4F600BFC2A5 /* ethereum.gif */; };
+		6E3D08AA1EF2B6A400BFC2A5 /* ethereumDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */; };
 		6E6068F11EDC25B30069FF50 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8331C02C19677E9000FBA23E /* NotificationCenter.framework */; };
 		6E6068F41EDC25B30069FF50 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6068F31EDC25B30069FF50 /* TodayViewController.swift */; };
 		6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6068F51EDC25B30069FF50 /* MainInterface.storyboard */; };
@@ -151,6 +153,8 @@
 		07DA618C1965E3A600E97CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DA618D1965E3A600E97CC3 /* CryptoCurrencyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCurrencyKit.h; sourceTree = "<group>"; };
 		4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E3D08A71EF2B4F600BFC2A5 /* ethereum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ethereum.gif; sourceTree = "<group>"; };
+		6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethereumDown.png; sourceTree = "<group>"; };
 		6E6068F01EDC25B30069FF50 /* BTC Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BTC Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6068F31EDC25B30069FF50 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		6E6068F61EDC25B30069FF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				07DA616B1965E33100E97CC3 /* Main.storyboard */,
 				4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */,
 				07DA616E1965E33100E97CC3 /* Images.xcassets */,
+				6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */,
+				6E3D08A71EF2B4F600BFC2A5 /* ethereum.gif */,
 				6E82FAA31EE1BA540045FB7A /* bitcoingif.gif */,
 				07DA61651965E33100E97CC3 /* Supporting files */,
 			);
@@ -621,7 +627,9 @@
 				6E82FAA41EE1BA540045FB7A /* bitcoingif.gif in Resources */,
 				4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */,
 				07DA616D1965E33100E97CC3 /* Main.storyboard in Resources */,
+				6E3D08AA1EF2B6A400BFC2A5 /* ethereumDown.png in Resources */,
 				6E8847C81EDF044C001CC971 /* EthereumViewController.xib in Resources */,
+				6E3D08A81EF2B4F600BFC2A5 /* ethereum.gif in Resources */,
 				07DA616F1965E33100E97CC3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,8 +20,8 @@
 //4. algorihtmen to calcuæate average, and with timer
 //5. check if price is going down or up in percentage
 //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
+//7. Put specific price into Notification (up,down)
 
-//import Cashier
 import UIKit
 import CryptoCurrencyKit
 import UserNotifications
@@ -97,18 +97,14 @@ class TempEthereumViewController: CurrencyDataViewController {
                         if let newEthPercent_Change_1h_double = NumberFormatter().number(from: currency.percent_change_1h)?.doubleValue {
                             print("\n New ETH Price %  \(newEthPercent_Change_1h_double)")
                             
-                        if(abs(newEthPercent_Change_1h_double) >= 1.0) {  //Compare Price
+                        if(abs(newEthPercent_Change_1h_double) >= 5.0) {  //Compare Price
                                 self.updateNotificationPriceChangeUp()
-                        } else if (abs(newEthPercent_Change_1h_double) <= -1.0) {
+                            
+                        } else if (abs(newEthPercent_Change_1h_double) <= 5.0) {  //  check for minus value ->   || (abs(newEthPercent_Change_1h_double) <= 2.5)
                                 self.updateNotificationPriceChangeDown()
                             }
-                            
-                        } else {
-                            print("value is other" )
                         }
-                        
-
-                        
+                    
                     }
                 }
                 
@@ -119,28 +115,26 @@ class TempEthereumViewController: CurrencyDataViewController {
         
     }
     
+    
 
-    
-    
         //Updates Notification to User if Price - UP
     func updateNotificationPriceChangeUp() {
         print("Price Alert Notified - Ethereum Price increasd more than %5 ")
-        scheduleNotification(inSeconds: 1) { (true) in
+        scheduleNotificationEthUp(inSeconds: 1) { (true) in
         }
     }
     
         //Updates Notification to User if Price - DOWN
     func updateNotificationPriceChangeDown() {
         print("Price Alert Notificed - Ethereum Price dropped more than %5 ")
-        scheduleNotification(inSeconds: 1) { (true) in
+        scheduleNotificationEthDown(inSeconds: 1) { (true) in
         }
     }
     
   
 
     @IBAction func btnNotifiTest(_ sender: Any) {
-        scheduleNotification(inSeconds: 5, completion: { success in
-            
+       scheduleNotificationEthUp(inSeconds: 5, completion: { success in
             if success {
                 print("Successfully scheduled notification ")
             } else {
@@ -153,12 +147,54 @@ class TempEthereumViewController: CurrencyDataViewController {
     
     
     
-    func scheduleNotification(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
+    func scheduleNotificationEthDown(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
+        
+        //Add An Attachment 
+        let ethereumDown = "ethereumDown"
+        
+        guard let imageEthDown = Bundle.main.url(forResource: ethereumDown, withExtension: "png") else {
+            completion(false)
+            print("failed to find png")
+            return
+        }
+        
+        var attachment: UNNotificationAttachment
+        attachment = try! UNNotificationAttachment(identifier: "ethereumDownNotification", url: imageEthDown, options: .none)
+        
+        let notification = UNMutableNotificationContent()
+        
+        //Only for extension 
+        notification.categoryIdentifier = "ethereumNotificationCategory"
+        
+        notification.title = "New Price Drop evaluation"
+        notification.subtitle = "Ethereum Dropped - %5"
+        notification.body = " New Ethereum Notification"
+        notification.sound = UNNotificationSound(named: "upsound.waw")
+        notification.attachments = [attachment]
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        let request = UNNotificationRequest(identifier: "ethereumDownNotification", content: notification, trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler:  { error in
+            if error != nil {
+                print(error)
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
+        
+    }
+    
+    
+    
+    
+    func scheduleNotificationEthUp(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
         
         // Add an attachement
-        let bitcoinGif = "bitcoingif"
+        let ethereumGif = "ethereum"
         
-        guard let imageBitcoinUrl = Bundle.main.url(forResource: bitcoinGif, withExtension: "gif") else {
+        guard let imageEthUrl = Bundle.main.url(forResource: ethereumGif, withExtension: "gif") else {
             completion(false )
             print("failed to find gif")
             return
@@ -166,16 +202,16 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         
         var attachment: UNNotificationAttachment
-        attachment = try! UNNotificationAttachment(identifier: "ethereumNotification", url: imageBitcoinUrl, options: .none)
+        attachment = try! UNNotificationAttachment(identifier: "ethereumNotification", url: imageEthUrl, options: .none)
  
         let notification = UNMutableNotificationContent()
         
         //Only for EXTENSION 
-        notification.categoryIdentifier = "bitcoinNotificationCategory"
+        notification.categoryIdentifier = "ethereumNotificationCategory"
         
         
         notification.title = "New Price evalutaiton"
-        notification.subtitle = "Bitcoin raised + 5%"
+        notification.subtitle = "Ethereum increase + 5%"
         notification.body = " New Price Notification"
         notification.sound = UNNotificationSound(named: "upsound.waw")
         notification.attachments = [attachment]
