@@ -1190,6 +1190,7 @@
 				6E82FABA1EE6B7920045FB7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E8847AA1EDEC0E8001CC971 /* Build configuration list for PBXNativeTarget "ETH Widget" */ = {
 			isa = XCConfigurationList;

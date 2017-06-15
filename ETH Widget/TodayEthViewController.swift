@@ -16,26 +16,31 @@ import Alamofire
 class TodayEthViewController: CurrencyDataViewController, NCWidgetProviding {
     
     
-let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,DASH,XRP&tsyms=BTC,USD,EURO")! //Add parameters in the url for more data request
-   // let baseURL_Price = URL (string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
+let baseURL_Price = URL (string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")
     
     
     @IBOutlet weak var ethPriceLbl: UILabel!
     @IBOutlet weak var ethPriceChangeLbl: UILabel!
 
+    var lineWidth: CGFloat = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         
-    
+        print("ETH Widget Initialized")
+        
         requestEthereumPrice { (response) in
             switch response.result {
                 
             case .success (let exchangeRate):
        
-               for currency in exchangeRate.currencies {
-                print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.currencies)")
+               for currency in exchangeRate.ethereum {
+                print("Looping through Exchanges exchangeRate.currencies: \(exchangeRate.ethereum)")
+                print(exchangeRate.price_usd)
+                
+                self.ethPriceLbl.text = "$ \(exchangeRate.price_usd)"
+                self.ethPriceChangeLbl.text =  "% \(exchangeRate.percent_change_1h)"
                 
                 }
                 
@@ -45,7 +50,14 @@ let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemu
             }
         }
         
+        
+
     }
+    
+   override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -68,7 +80,7 @@ let baseURL_Price = URL (string: "https://min-api.cryptocompare.com/data/pricemu
     
     //GET Ethereum Endpoint - API
     func requestEthereumPrice(completion: @escaping (DataResponse<ExchangeRate>) -> Void) {
-        request(baseURL_Price).responseSerializable(completion)
+        request(baseURL_Price!).responseSerializable(completion)
         
     }
     

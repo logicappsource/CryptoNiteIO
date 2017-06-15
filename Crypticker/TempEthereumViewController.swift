@@ -30,6 +30,11 @@ class TempEthereumViewController: UIViewController {
     var btcCachedPrice: Double = 20.00
     
     
+    @IBOutlet weak var priceLblEth: UILabel!
+    @IBOutlet weak var priceChangeLblEth: UILabel!
+    
+    
+    
     //Cachhing price
     //let ethPriceCached = NSCache<NSString, Double>()
     
@@ -78,6 +83,7 @@ class TempEthereumViewController: UIViewController {
                 for currency in ethereumData {
                     
                     if(currency.name == "Ethereum") {
+                        /*
                         print("Ethereum Data  \n" )
                         print("Currency Name:  \(currency.name)")
                         print("Ranking: \(currency.rank)")
@@ -85,9 +91,16 @@ class TempEthereumViewController: UIViewController {
                         print("% Change_24 Hours: \(currency.percent_change_24h)")
                         print("% Change_7 Days: \(currency.percent_change_7d)")
                         print("Crypto Price in USD: \(currency.price_usd)")
+                        */
+                        
+                        
+                        self.priceLblEth.text = " $ \(currency.price_usd)"
+                        self.priceChangeLblEth.text = "% \(currency.percent_change_1h) "
+                        
+    
                     }
                     
-                                       //CHeck for update in price and compare old price (global var) to new request price (cache)
+                //CHeck for update in price and compare old price (global var) to new request price (cache)
                      self.priceCompareFromCache()
                 }
                 
@@ -214,13 +227,7 @@ class TempEthereumViewController: UIViewController {
     }
     
     
-    
-    
-  /*
-    func updateDayLabel(_ price: EthereumPrice) {
-     
-    }
-  */
+
     
 
     

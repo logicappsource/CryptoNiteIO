@@ -24,7 +24,8 @@ class TodayViewController: CurrencyDataViewController, NCWidgetProviding {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
       
-
+        print("Bitcoin widget initalized ")
+        
         lineChartView.delegate = self
         lineChartView.dataSource = self
         

@@ -198,6 +198,8 @@
                         <outlet property="PriceLabel" destination="npX-gn-KKX" id="yPD-mB-PxF"/>
                         <outlet property="PriceOnDayLabel" destination="gPt-KV-j3E" id="iV4-jb-SmI"/>
                         <outlet property="label" destination="pin-K5-lwn" id="oWy-37-akf"/>
+                        <outlet property="priceChangeLblEth" destination="gfw-ud-ypL" id="v6O-SJ-nsg"/>
+                        <outlet property="priceLblEth" destination="npX-gn-KKX" id="sEn-BO-8hU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Om-sa-Siu" sceneMemberID="firstResponder"/>
