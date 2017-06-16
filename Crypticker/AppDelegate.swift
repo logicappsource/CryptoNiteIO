@@ -9,6 +9,7 @@
 
 import UIKit
 import UserNotifications
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UNUserNotificationCenter.current().delegate = self
     
     configureUserNotifications()
+    
+    STPPaymentConfiguration.shared().publishableKey = "pk_test_4Nu7Yz2ufH6Qv2wCc3Jn582V"
     
     return true
   }

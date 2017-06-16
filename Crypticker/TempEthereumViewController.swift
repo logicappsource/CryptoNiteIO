@@ -55,10 +55,10 @@ class TempEthereumViewController: CurrencyDataViewController {
     
     @IBOutlet weak var label: UILabel! // test label
     
-    
+    /*
     func updateDayLabel(_ price: EthereumPrice) {
         DayLabel.text = dateFormatter.string(from: price.time)
-    }
+    }*/
     
     
     /***** Background fetch ****/

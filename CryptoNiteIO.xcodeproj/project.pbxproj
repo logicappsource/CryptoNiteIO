@@ -19,6 +19,8 @@
 		6E3D08AA1EF2B6A400BFC2A5 /* ethereumDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */; };
 		6E3D08AC1EF2C47700BFC2A5 /* btcdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08AB1EF2C47700BFC2A5 /* btcdrop.png */; };
 		6E3D08AE1EF2CAF600BFC2A5 /* bitcoinCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D08AD1EF2CAF600BFC2A5 /* bitcoinCurrency.swift */; };
+		6E3D08B01EF3C53F00BFC2A5 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3D08AF1EF3C53F00BFC2A5 /* Stripe.framework */; };
+		6E3D08B11EF3C56600BFC2A5 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3D08AF1EF3C53F00BFC2A5 /* Stripe.framework */; };
 		6E6068F11EDC25B30069FF50 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8331C02C19677E9000FBA23E /* NotificationCenter.framework */; };
 		6E6068F41EDC25B30069FF50 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6068F31EDC25B30069FF50 /* TodayViewController.swift */; };
 		6E6068F71EDC25B30069FF50 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6068F51EDC25B30069FF50 /* MainInterface.storyboard */; };
@@ -64,8 +66,6 @@
 		6E8847C61EDF044C001CC971 /* EthereumProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847BF1EDF044C001CC971 /* EthereumProtocols.swift */; };
 		6E8847C81EDF044C001CC971 /* EthereumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8847C11EDF044C001CC971 /* EthereumViewController.xib */; };
 		6E8847CA1EDF079E001CC971 /* TempEthereumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847C91EDF079E001CC971 /* TempEthereumViewController.swift */; };
-		6E8847CC1EDF0B51001CC971 /* EthereumPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847CB1EDF0B51001CC971 /* EthereumPrice.swift */; };
-		6E8847CE1EDF0DEC001CC971 /* EthereumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847CD1EDF0DEC001CC971 /* EthereumService.swift */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,6 +159,7 @@
 		6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethereumDown.png; sourceTree = "<group>"; };
 		6E3D08AB1EF2C47700BFC2A5 /* btcdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btcdrop.png; sourceTree = "<group>"; };
 		6E3D08AD1EF2CAF600BFC2A5 /* bitcoinCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bitcoinCurrency.swift; sourceTree = "<group>"; };
+		6E3D08AF1EF3C53F00BFC2A5 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stripe.framework; path = Carthage/Build/iOS/Stripe.framework; sourceTree = "<group>"; };
 		6E6068F01EDC25B30069FF50 /* BTC Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BTC Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6068F31EDC25B30069FF50 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		6E6068F61EDC25B30069FF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -192,8 +193,6 @@
 		6E8847BF1EDF044C001CC971 /* EthereumProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumProtocols.swift; sourceTree = "<group>"; };
 		6E8847C11EDF044C001CC971 /* EthereumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EthereumViewController.xib; sourceTree = "<group>"; };
 		6E8847C91EDF079E001CC971 /* TempEthereumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempEthereumViewController.swift; sourceTree = "<group>"; };
-		6E8847CB1EDF0B51001CC971 /* EthereumPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumPrice.swift; sourceTree = "<group>"; };
-		6E8847CD1EDF0DEC001CC971 /* EthereumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumService.swift; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -216,6 +215,7 @@
 				07DA619E1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Frameworks */,
 				6E8847721EDC96CB001CC971 /* Alamofire.framework in Frameworks */,
 				6E8847741EDC96D3001CC971 /* Serpent.framework in Frameworks */,
+				6E3D08B11EF3C56600BFC2A5 /* Stripe.framework in Frameworks */,
 				6E8847731EDC96CE001CC971 /* Cashier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +257,7 @@
 				6E8847AD1EDEC4E8001CC971 /* Alamofire.framework in Frameworks */,
 				6E8847AF1EDEC4EE001CC971 /* Serpent.framework in Frameworks */,
 				6E8847AE1EDEC4EA001CC971 /* Cashier.framework in Frameworks */,
+				6E3D08B01EF3C53F00BFC2A5 /* Stripe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +292,7 @@
 		07DA61641965E33100E97CC3 /* Crypticker */ = {
 			isa = PBXGroup;
 			children = (
+				6E3D08B31EF3D31D00BFC2A5 /* CryptoStore */,
 				6E8847931EDD6CFC001CC971 /* Repository */,
 				6E8847761EDCA19B001CC971 /* Support */,
 				6E6069031EDC8DD80069FF50 /* Scenes */,
@@ -319,8 +321,6 @@
 		07DA618A1965E3A600E97CC3 /* CryptoCurrencyKit */ = {
 			isa = PBXGroup;
 			children = (
-				6E8847CB1EDF0B51001CC971 /* EthereumPrice.swift */,
-				6E8847CD1EDF0DEC001CC971 /* EthereumService.swift */,
 				83E8FF97196657C1005F928D /* BitCoinPrice.swift */,
 				83E8FF98196657C1005F928D /* BitCoinService.swift */,
 				83E8FF99196657C1005F928D /* BitCoinStats.swift */,
@@ -338,6 +338,13 @@
 				07DA618C1965E3A600E97CC3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E3D08B31EF3D31D00BFC2A5 /* CryptoStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CryptoStore;
 			sourceTree = "<group>";
 		};
 		6E6068F21EDC25B30069FF50 /* BTC Widget */ = {
@@ -431,6 +438,7 @@
 		8331C02B19677E9000FBA23E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E3D08AF1EF3C53F00BFC2A5 /* Stripe.framework */,
 				6E88476F1EDC9520001CC971 /* Serpent.framework */,
 				6E88476D1EDC951C001CC971 /* Cashier.framework */,
 				6E88476B1EDC951A001CC971 /* Alamofire.framework */,
@@ -701,6 +709,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Serpent.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cashier.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Stripe.framework",
 			);
 			outputPaths = (
 			);
@@ -741,10 +750,8 @@
 			files = (
 				831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */,
 				83E8FF9E196657C1005F928D /* BitCoinStats.swift in Sources */,
-				6E8847CE1EDF0DEC001CC971 /* EthereumService.swift in Sources */,
 				8331BFFD19671DD400FBA23E /* JBBarChartView.m in Sources */,
 				8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */,
-				6E8847CC1EDF0B51001CC971 /* EthereumPrice.swift in Sources */,
 				83E8FF9D196657C1005F928D /* BitCoinService.swift in Sources */,
 				8331BFFB19671DD400FBA23E /* JBChartView.m in Sources */,
 				83E8FFA0196657C1005F928D /* SwiftyJSON.swift in Sources */,

@@ -23,6 +23,7 @@ class ViewController: CurrencyDataViewController {
     super.init(coder: aDecoder)
   }
     
+    @IBOutlet weak var priceLblBtc: UILabel!
     
   let baseURLBitcoin = URL(string: "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=100")!
   
