@@ -4,8 +4,7 @@
 //
 //  Created by LogicAppSourceIO on 21/06/2017.
 //  Copyright (c) 2017 LogicAppSourceIO. All rights reserved.
-//
-
+//    //presenter communicater kun fra viewvVC
 import UIKit
 
 class ProfileViewController: UIViewController {
@@ -21,14 +20,7 @@ class ProfileViewController: UIViewController {
     // Caching -> comparing
     // Background Fetch/Task
     //sLink Global ?
-    
-    
-    
     // nested Entry []
-    
-    
-    //presenter communicater kun fra viewvVC
-    
     
     
     var sKey = ""
@@ -81,8 +73,10 @@ class ProfileViewController: UIViewController {
 // PRESENTER -> VIEW
 extension ProfileViewController: ProfilePresenterOutput {
     func display(_ displayModel: Profile.DisplayData.Currency) {
-        JSONApiTxtField.text = "\(displayModel.btc) og \(displayModel.eth)"
-        print("\(displayModel.btc) og \(displayModel.eth)")
+        JSONApiTxtField.text = "\(displayModel.btc) og \(displayModel.xrp)"
+        
+        print ("\(displayModel.btc) og \(displayModel.xrp)")
+        //print("\(displayModel.btc) \n \(displayModel.eth) \n \(displayModel.tsst) \n \(displayModel.xrp) ")
     }
     
     func display(_ error: Profile.DisplayData.Error) {

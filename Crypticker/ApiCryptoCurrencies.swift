@@ -11,6 +11,9 @@ import Foundation
 struct ApiCryptoCurrencies {
     
     var btc = ""
-
+    var xrp = ""
+    var tsst = ""
+    var eth = "" 
+    
     
 }
