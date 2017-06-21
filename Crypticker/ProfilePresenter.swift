@@ -36,12 +36,12 @@ extension ProfilePresenter: ProfilePresenterInput {
 // INTERACTOR -> PRESENTER (indirect)
 extension ProfilePresenter: ProfileInteractorOutput {
     func present(_ response: Profile.Response.Currency) {
-        guard let btc = response.btc, let xrp = response.xrp, let tsst = response.tsst, let ETH = response.eth else {
+        guard let btc = response.btc, let btcValue = response.btcValue, let tsst = response.tsst, let ETH = response.eth else {
             output?.display(Profile.DisplayData.Error(message: "Something went wrong!"))
             return
             
         }
-        let currencyDD = Profile.DisplayData.Currency(btc: btc, eth: ETH, xrp: xrp, tsst: tsst)
+        let currencyDD = Profile.DisplayData.Currency(btc: btc, eth: ETH, btcValue: btcValue, tsst: tsst)
         output?.display(currencyDD)
     }
 }

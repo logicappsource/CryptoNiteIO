@@ -73,9 +73,9 @@ class ProfileViewController: UIViewController {
 // PRESENTER -> VIEW
 extension ProfileViewController: ProfilePresenterOutput {
     func display(_ displayModel: Profile.DisplayData.Currency) {
-        JSONApiTxtField.text = "\(displayModel.btc) og \(displayModel.xrp)"
+        JSONApiTxtField.text = "\(displayModel.btc) og \(displayModel.btcValue)"
         
-        print ("\(displayModel.btc) og \(displayModel.xrp)")
+        print ("\(displayModel.btc) og \(displayModel.btcValue)") // displayModel.btc = BTC
         //print("\(displayModel.btc) \n \(displayModel.eth) \n \(displayModel.tsst) \n \(displayModel.xrp) ")
     }
     

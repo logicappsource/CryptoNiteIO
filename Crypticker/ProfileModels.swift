@@ -23,7 +23,7 @@ extension Profile.Response {
     struct Currency {
         var btc:String?
         var eth:String?
-        var xrp:String?
+        var btcValue:String?
         var tsst:String?
     }
 }
@@ -32,7 +32,7 @@ extension Profile.DisplayData {
     struct Currency {
         var btc:String
         var eth:String
-        var xrp:String
+        var btcValue:String
         var tsst:String
     }
     struct Error {
