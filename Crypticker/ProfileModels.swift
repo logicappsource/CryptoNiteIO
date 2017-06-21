@@ -32,11 +32,12 @@ extension Profile.Response {
         
         var etc:String?
         var etcValue:String?
-             /*
+        
         var xem:String?
         var xemValue:String?
         var dash:String?
         var dashValue:String?
+        /*
         var strat:String?
         var stratValue:String?
         var xmr:String?
@@ -67,11 +68,12 @@ extension Profile.DisplayData {
         
         var etc:String
         var etcValue:String
-            /*
+        
         var xem:String
         var xemValue:String
         var dash:String
         var dashValue:String
+             /*
         var strat:String
         var stratValue:String
         var xmr:String

@@ -78,7 +78,7 @@ extension ProfileViewController: ProfilePresenterOutput {
 //        print("\(displayModel.btc) + \(displayModel.btcValue)") // BTC + Name +Value
 //        print("\(displayModel.xrp) + \(displayModel.xrpValue)") // XRP  + Name + Value
 //        print("\(displayModel.eth)  +  \(displayModel.ethValue)")
-        print("\(displayModel.etc) + val + \(displayModel.etcValue) ")
+//        print("\(displayModel.xem) + val + \(displayModel.xemValue) ")
         
     }
     
