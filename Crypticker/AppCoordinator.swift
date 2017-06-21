@@ -32,8 +32,11 @@ class AppCoordinator: Coordinator {
     // MARK: - Flows -
 
     func showMain() {
-        // Create your child coordinator here, add it as a child and start it.
-        // Make sure you set the root view controller of the window.
+        let navVC = UINavigationController()
+        let profileCoordinator = ProfileCoordinator(navigationController: navVC)
+        profileCoordinator.start()
+        children.append(profileCoordinator)
+        window.rootViewController = navVC
     }
 
     // MARK: - Additional Setup -

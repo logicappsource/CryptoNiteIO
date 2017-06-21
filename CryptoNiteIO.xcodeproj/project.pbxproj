@@ -66,6 +66,20 @@
 		6E8847CA1EDF079E001CC971 /* TempEthereumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847C91EDF079E001CC971 /* TempEthereumViewController.swift */; };
 		6E8847CC1EDF0B51001CC971 /* EthereumPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847CB1EDF0B51001CC971 /* EthereumPrice.swift */; };
 		6E8847CE1EDF0DEC001CC971 /* EthereumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8847CD1EDF0DEC001CC971 /* EthereumService.swift */; };
+		6E8CF7FD1EFA670700A7DF7C /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7F61EFA670700A7DF7C /* ProfileCoordinator.swift */; };
+		6E8CF7FE1EFA670700A7DF7C /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7F71EFA670700A7DF7C /* ProfileInteractor.swift */; };
+		6E8CF7FF1EFA670700A7DF7C /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7F81EFA670700A7DF7C /* ProfileModels.swift */; };
+		6E8CF8001EFA670700A7DF7C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7F91EFA670700A7DF7C /* ProfilePresenter.swift */; };
+		6E8CF8011EFA670700A7DF7C /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7FA1EFA670700A7DF7C /* ProfileProtocols.swift */; };
+		6E8CF8021EFA670700A7DF7C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CF7FB1EFA670700A7DF7C /* ProfileViewController.swift */; };
+		6E8CF8031EFA670700A7DF7C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8CF7FC1EFA670700A7DF7C /* ProfileViewController.xib */; };
+		6EBB38141EFA7622008783A6 /* ApiCryptoCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB38131EFA7622008783A6 /* ApiCryptoCurrencies.swift */; };
+		6EBB38161EFA78F5008783A6 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB38151EFA78F5008783A6 /* Cell.swift */; };
+		6EBB38181EFA7946008783A6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB38171EFA7946008783A6 /* Data.swift */; };
+		6EBB381C1EFA7BEC008783A6 /* ApiResponseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB381B1EFA7BEC008783A6 /* ApiResponseCurrency.swift */; };
+		6EBB381E1EFA7C41008783A6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB381D1EFA7C41008783A6 /* Feed.swift */; };
+		6EBB38201EFA7CF5008783A6 /* RepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */; };
+		6EBB38221EFA7FF0008783A6 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB38211EFA7FF0008783A6 /* ConnectionManager.swift */; };
 		831B736E198E02CC006A5A5A /* CurrencyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */; };
 		8331BFF919671DD400FBA23E /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331BFF319671DD400FBA23E /* JBLineChartView.m */; };
 		8331BFFA19671DD400FBA23E /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8331BFF419671DD400FBA23E /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -194,6 +208,20 @@
 		6E8847C91EDF079E001CC971 /* TempEthereumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempEthereumViewController.swift; sourceTree = "<group>"; };
 		6E8847CB1EDF0B51001CC971 /* EthereumPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumPrice.swift; sourceTree = "<group>"; };
 		6E8847CD1EDF0DEC001CC971 /* EthereumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumService.swift; sourceTree = "<group>"; };
+		6E8CF7F61EFA670700A7DF7C /* ProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		6E8CF7F71EFA670700A7DF7C /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		6E8CF7F81EFA670700A7DF7C /* ProfileModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		6E8CF7F91EFA670700A7DF7C /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		6E8CF7FA1EFA670700A7DF7C /* ProfileProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		6E8CF7FB1EFA670700A7DF7C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6E8CF7FC1EFA670700A7DF7C /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		6EBB38131EFA7622008783A6 /* ApiCryptoCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCryptoCurrencies.swift; sourceTree = "<group>"; };
+		6EBB38151EFA78F5008783A6 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		6EBB38171EFA7946008783A6 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		6EBB381B1EFA7BEC008783A6 /* ApiResponseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseCurrency.swift; sourceTree = "<group>"; };
+		6EBB381D1EFA7C41008783A6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAPI.swift; sourceTree = "<group>"; };
+		6EBB38211EFA7FF0008783A6 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		831B736D198E02CC006A5A5A /* CurrencyDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyDataViewController.swift; sourceTree = "<group>"; };
 		8331BFF319671DD400FBA23E /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
 		8331BFF419671DD400FBA23E /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
@@ -353,6 +381,7 @@
 		6E6069031EDC8DD80069FF50 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6E8CF7F51EFA66F600A7DF7C /* Profile  */,
 				6E8847BA1EDF0430001CC971 /* Ethereum */,
 			);
 			name = Scenes;
@@ -387,6 +416,7 @@
 			children = (
 				6E8847941EDD6D21001CC971 /* ServerRepository.swift */,
 				6E8847961EDD6E58001CC971 /* Repository.swift */,
+				6EBB38211EFA7FF0008783A6 /* ConnectionManager.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -413,6 +443,26 @@
 				6E8847C91EDF079E001CC971 /* TempEthereumViewController.swift */,
 			);
 			name = Ethereum;
+			sourceTree = "<group>";
+		};
+		6E8CF7F51EFA66F600A7DF7C /* Profile  */ = {
+			isa = PBXGroup;
+			children = (
+				6E8CF7F61EFA670700A7DF7C /* ProfileCoordinator.swift */,
+				6E8CF7F71EFA670700A7DF7C /* ProfileInteractor.swift */,
+				6E8CF7F81EFA670700A7DF7C /* ProfileModels.swift */,
+				6E8CF7F91EFA670700A7DF7C /* ProfilePresenter.swift */,
+				6E8CF7FA1EFA670700A7DF7C /* ProfileProtocols.swift */,
+				6E8CF7FB1EFA670700A7DF7C /* ProfileViewController.swift */,
+				6E8CF7FC1EFA670700A7DF7C /* ProfileViewController.xib */,
+				6EBB38131EFA7622008783A6 /* ApiCryptoCurrencies.swift */,
+				6EBB38151EFA78F5008783A6 /* Cell.swift */,
+				6EBB38171EFA7946008783A6 /* Data.swift */,
+				6EBB381B1EFA7BEC008783A6 /* ApiResponseCurrency.swift */,
+				6EBB381D1EFA7C41008783A6 /* Feed.swift */,
+				6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */,
+			);
+			name = "Profile ";
 			sourceTree = "<group>";
 		};
 		8331BFF219671DBE00FBA23E /* JBChartView */ = {
@@ -630,6 +680,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8CF8031EFA670700A7DF7C /* ProfileViewController.xib in Resources */,
 				6E82FAA41EE1BA540045FB7A /* bitcoingif.gif in Resources */,
 				4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */,
 				07DA616D1965E33100E97CC3 /* Main.storyboard in Resources */,
@@ -718,19 +769,32 @@
 				6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */,
 				6E8847C51EDF044C001CC971 /* EthereumPresenter.swift in Sources */,
 				6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */,
+				6E8CF7FF1EFA670700A7DF7C /* ProfileModels.swift in Sources */,
+				6EBB381C1EFA7BEC008783A6 /* ApiResponseCurrency.swift in Sources */,
 				6E8847B41EDECFBF001CC971 /* CurrencyData.swift in Sources */,
 				6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */,
 				6E8847C41EDF044C001CC971 /* EthereumModels.swift in Sources */,
 				6E82FAA21EE1984F0045FB7A /* EthereumCurrency.swift in Sources */,
+				6EBB38161EFA78F5008783A6 /* Cell.swift in Sources */,
 				6E3D08AE1EF2CAF600BFC2A5 /* bitcoinCurrency.swift in Sources */,
 				07DA616A1965E33100E97CC3 /* ViewController.swift in Sources */,
+				6EBB38141EFA7622008783A6 /* ApiCryptoCurrencies.swift in Sources */,
+				6E8CF7FE1EFA670700A7DF7C /* ProfileInteractor.swift in Sources */,
 				6E8847C21EDF044C001CC971 /* EthereumCoordinator.swift in Sources */,
 				6E8847C61EDF044C001CC971 /* EthereumProtocols.swift in Sources */,
 				07DA61681965E33100E97CC3 /* AppDelegate.swift in Sources */,
+				6EBB381E1EFA7C41008783A6 /* Feed.swift in Sources */,
 				6E8847971EDD6E58001CC971 /* Repository.swift in Sources */,
+				6E8CF8021EFA670700A7DF7C /* ProfileViewController.swift in Sources */,
+				6E8CF8011EFA670700A7DF7C /* ProfileProtocols.swift in Sources */,
 				6E8847951EDD6D21001CC971 /* ServerRepository.swift in Sources */,
+				6EBB38181EFA7946008783A6 /* Data.swift in Sources */,
 				6E8847CA1EDF079E001CC971 /* TempEthereumViewController.swift in Sources */,
+				6E8CF8001EFA670700A7DF7C /* ProfilePresenter.swift in Sources */,
+				6EBB38221EFA7FF0008783A6 /* ConnectionManager.swift in Sources */,
+				6EBB38201EFA7CF5008783A6 /* RepositoryAPI.swift in Sources */,
 				6E8847C31EDF044C001CC971 /* EthereumInteractor.swift in Sources */,
+				6E8CF7FD1EFA670700A7DF7C /* ProfileCoordinator.swift in Sources */,
 				6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

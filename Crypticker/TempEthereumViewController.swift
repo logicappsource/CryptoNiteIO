@@ -10,9 +10,7 @@
 //Cach price
 //let ethPriceCached = NSCache<NSString, Double>()
 
-
 /* Later re-organie model -> coordinator -> Clean Arcitecture */
-
 //1. Model
 //2. Make API request -> Store in dict<>
 //3. request pr timer
@@ -22,12 +20,17 @@
 //6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
 //7. Put specific price into Notification (up,down)
 
+
+// -------------------------------------
+//x. UI Slider - For alerts adjusting ->
+//x. (Mustbe logged in)
+//x. Func that X ammount of the blockfolio
+
 import UIKit
 import CryptoCurrencyKit
 import UserNotifications
 import Serpent
 import Alamofire
-
 
 
 class TempEthereumViewController: CurrencyDataViewController {
@@ -79,7 +82,6 @@ class TempEthereumViewController: CurrencyDataViewController {
     }
     
     
-
     
     func requestEthereumData(){
         makeEthereumDataRequest{ (response) in
@@ -104,7 +106,6 @@ class TempEthereumViewController: CurrencyDataViewController {
                                 self.updateNotificationPriceChangeDown()
                             }
                         }
-                    
                     }
                 }
                 
@@ -132,7 +133,7 @@ class TempEthereumViewController: CurrencyDataViewController {
     }
     
   
-
+    //Test BTN for notification
     @IBAction func btnNotifiTest(_ sender: Any) {
        scheduleNotificationEthUp(inSeconds: 5, completion: { success in
             if success {
@@ -146,7 +147,7 @@ class TempEthereumViewController: CurrencyDataViewController {
     
     
     
-    
+    //Extension for schedule notification
     func scheduleNotificationEthDown(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
         
         //Add An Attachment 
@@ -165,7 +166,6 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         //Only for extension 
         notification.categoryIdentifier = "ethereumNotificationCategory"
-        
         notification.title = "New Price Drop evaluation"
         notification.subtitle = "Ethereum Dropped - %5"
         notification.body = " New Ethereum Notification"
@@ -188,7 +188,7 @@ class TempEthereumViewController: CurrencyDataViewController {
     
     
     
-    
+    //Extension for notifications
     func scheduleNotificationEthUp(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool ) -> ()) {
         
         // Add an attachement
@@ -208,14 +208,11 @@ class TempEthereumViewController: CurrencyDataViewController {
         
         //Only for EXTENSION 
         notification.categoryIdentifier = "ethereumNotificationCategory"
-        
-        
         notification.title = "New Price evalutaiton"
         notification.subtitle = "Ethereum increase + 5%"
         notification.body = " New Price Notification"
         notification.sound = UNNotificationSound(named: "upsound.waw")
         notification.attachments = [attachment]
-        
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
         
@@ -229,9 +226,7 @@ class TempEthereumViewController: CurrencyDataViewController {
                 completion(true)
             }
         })
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -244,11 +239,11 @@ class TempEthereumViewController: CurrencyDataViewController {
                 print(error?.localizedDescription)
             }
         }
+        
         print("tempEthereum VC - Default")
         updateUI()
         requestEthereumData()
         //registerBackgroundTask()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -262,37 +257,43 @@ class TempEthereumViewController: CurrencyDataViewController {
 }
 
 
+extension TempEthereumViewController {  /*-----BACKGROUND TASK----------
+    
+     
+     //Initilaize background mode
+     var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+     
+     
+     func registerBackgroundTask() {
+     backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+     self?.endBackgroundTask()
+     }
+     assert(backgroundTask != UIBackgroundTaskInvalid)
+     }
+     
+     
+     
+     func endBackgroundTask() {
+     print("Background task ended ")
+     
+     UIApplication.shared.endBackgroundTask(backgroundTask)
+     backgroundTask = UIBackgroundTaskInvalid
+     
+     if (backgroundTask != UIBackgroundTaskInvalid) {
+     endBackgroundTask()
+     }
+     }
+     
+     
+     func setMinimumBackgroundFetchInterval(_:) {
+     
+     }
+     
+     
+     -----BACKGROUND TASK--END-------******/
+    
+}
 
-/***-----BACKGROUND TASK----------
- 
- //Initilaize background mode
- var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
- 
- 
- func registerBackgroundTask() {
- backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
- self?.endBackgroundTask()
- }
- assert(backgroundTask != UIBackgroundTaskInvalid)
- }
- 
- 
- 
- func endBackgroundTask() {
- print("Background task ended ")
- 
- UIApplication.shared.endBackgroundTask(backgroundTask)
- backgroundTask = UIBackgroundTaskInvalid
- 
- if (backgroundTask != UIBackgroundTaskInvalid) {
- endBackgroundTask()
- }
- }
- 
- 
- func setMinimumBackgroundFetchInterval(_:) {
- 
- }
- 
- 
- -----BACKGROUND TASK--END-------******/
+
+
+

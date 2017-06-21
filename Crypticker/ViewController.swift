@@ -158,9 +158,6 @@ class ViewController: CurrencyDataViewController {
     }
     
     
-    
-
-  
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     self.lineChartView.reloadData()
   }

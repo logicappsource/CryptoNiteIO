@@ -18,15 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool { // Override point for customization after application launch.
     
-
-    //Coordinator = AppCoordinator(window: UIWindow(frame: UIScreen.main.bounds))
-  /*
     window = UIWindow(frame: UIScreen.main.bounds)
-    coordinator = AppCoordinator(window: .init()) //navigationController
+    let coordinator = AppCoordinator(window: window!)
     coordinator.start()
-    window?.makeKeyAndVisible()
-    coordinator.start()     
-    */
     
     //Background Fetch
     UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
@@ -83,11 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let favAction = UNNotificationAction(identifier: "Keep Notifying me", title: "Keep Notifying me", options: [])
         let dissmisAction = UNNotificationAction(identifier: "Don´t Disturb", title: "Don´t Disturb", options: [])
-        
         let category = UNNotificationCategory(identifier: "bitcoinNotificationCategory", actions: [favAction, dissmisAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
-    
-        
     }
     
     
