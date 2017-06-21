@@ -20,9 +20,12 @@
     //3. Update request and Compare with Cached Prev. Price 
     //4. Display price is going down or up in percentage
     //5. Notfiy settings for user, 4 levels , + adding sound. 
+    
+     // token/id for specific user ?
+    // Caching -> comparing
+    // Background Fetch/Task
+    
    
-  
-  
  ---> Instructions <---  
   
  (Bitcoin Version) 
