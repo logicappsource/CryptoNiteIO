@@ -3,35 +3,32 @@
 //  CryptoNiteIO
 //
 //  Created by LogicAppSourceIO on 21/06/2017.
-//  Copyright (c) 2017 LogicAppSourceIO. All rights reserved.
-//    //presenter communicater kun fra viewvVC
+//  Copyright (c) 2017 LogicAppSourceIO. All rights reserved.  //presenter communicater kun fra viewvVC
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
     //1. JSON API Key
     //2. Return - Coins Name, Ammount
     //3. MAke serpent request -> save under that specific user
     //4. Display i Appen.
     
-    
-    //Do i need a token/id for specific user ?
-    // Javascript ?
-    // Save in model ?
-    // Caching -> comparing
-    // Background Fetch/Task
-    //sLink Global ?
-    // nested Entry []
-    
-    
     var sKey = ""
     
     @IBOutlet weak var JSONApiTxtField: UITextField!
+    @IBOutlet weak var lblDisplayPercent: UILabel!
+    
+    @IBAction func sliderPercentNotifi(_ sender: UISlider) {
+        var currenctValue = Double(sender.value).roundTo(places: 2)
+        lblDisplayPercent.text = "\(currenctValue)"
+    }
+    
+    
     
     @IBAction func btnApi(_ sender: Any) {
         presenter.getData()
 //        JSONApiTxtField.text? = sKey
 //        concatApiKeyFromUser(sKey: sKey)
-//        print(sKey)
     }
     
     
@@ -72,18 +69,15 @@ class ProfileViewController: UIViewController {
 
 // PRESENTER -> VIEW
 extension ProfileViewController: ProfilePresenterOutput {
+    
     func display(_ displayModel: Profile.DisplayData.Currency) {
-        
        JSONApiTxtField.text = " \(displayModel.xrpValue) + \(displayModel.xrp ) "
 //        print("\(displayModel.btc) + \(displayModel.btcValue)") // BTC + Name +Value
-//        print("\(displayModel.xrp) + \(displayModel.xrpValue)") // XRP  + Name + Value
-//        print("\(displayModel.eth)  +  \(displayModel.ethValue)")
-//        print("\(displayModel.xem) + val + \(displayModel.xemValue) ")
+        
         
     }
     
     func display(_ error: Profile.DisplayData.Error) {
-        
         let alert = UIAlertController(title: "Fejl!", message: error.message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
     }
@@ -91,5 +85,11 @@ extension ProfileViewController: ProfilePresenterOutput {
 }
 
 
-
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
 
