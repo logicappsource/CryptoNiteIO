@@ -45,3 +45,11 @@ protocol ProfilePresenterOutput: class {
     func display(_ displayModel: Profile.DisplayData.Currency)
     func display(_ error: Profile.DisplayData.Error)
 }
+
+
+// Fetching on load -> User settings -> regards - Total ammount of coins --> % to display notifications etc.
+protocol profileSettings {
+    func fetchProfileSettings()
+}
+
+

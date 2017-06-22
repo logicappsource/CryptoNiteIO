@@ -57,6 +57,11 @@ extension Profile.Response {
         var xlm:String?
         var xlmValue:String?
         
+        var wawes:String?
+        var wawesValue:String?
+        
+        var bcn:String?
+        var bcnValue:String?
     }
 }
 
@@ -101,6 +106,11 @@ extension Profile.DisplayData {
         var xlm:String
         var xlmValue:String
         
+        var wawes:String
+        var wawesValue:String
+        
+        var bcn:String
+        var bcnValue:String
     }
     struct Error {
         var message:String        

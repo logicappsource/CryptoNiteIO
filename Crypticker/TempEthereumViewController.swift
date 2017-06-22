@@ -6,26 +6,6 @@
 //  Copyright © 2017 LogicAppSourceIO. All rights reserved.
 //
 
-/*****  IMPLEMENT LATER ******/
-//Cach price
-//let ethPriceCached = NSCache<NSString, Double>()
-
-/* Later re-organie model -> coordinator -> Clean Arcitecture */
-//1. Model
-//2. Make API request -> Store in dict<>
-//3. request pr timer
-
-//4. algorihtmen to calcuæate average, and with timer
-//5. check if price is going down or up in percentage
-//6.. if >< 5 %  then Display notification (Widget extension , Update Graph)
-//7. Put specific price into Notification (up,down)
-
-
-// -------------------------------------
-//x. UI Slider - For alerts adjusting ->
-//x. (Mustbe logged in)
-//x. Func that X ammount of the blockfolio
-
 import UIKit
 import CryptoCurrencyKit
 import UserNotifications
@@ -117,6 +97,7 @@ class TempEthereumViewController: CurrencyDataViewController {
     }
     
     
+    /*** ALL notifications should have their own protocol /delegate --> Each Currency  ***/
 
         //Updates Notification to User if Price - UP
     func updateNotificationPriceChangeUp() {
@@ -257,10 +238,9 @@ class TempEthereumViewController: CurrencyDataViewController {
 }
 
 
-extension TempEthereumViewController {  /*-----BACKGROUND TASK----------
-    
-     
-     //Initilaize background mode
+extension TempEthereumViewController {
+    /*-----BACKGROUND TASK----------
+    //Initilaize background mode
      var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
      
      
