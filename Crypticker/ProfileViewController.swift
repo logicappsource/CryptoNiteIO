@@ -8,20 +8,30 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    /******* NEEDS TO BE IMPLEMENTED *****/
+    //1. Conform to protocol and delegate -> User () Struct
+    //2. returning coins -> other VC -> NIB FILE
+    //3.  Store  id for a USER
     
-    //1. Return - Coins Name, Ammount -> Extension : move the data to to other VC
-    //2.  Store the specific id for a USER  + Global Class
     
     var sKey = ""
+    var currentValue: Double = 23.0
+    
     @IBOutlet weak var JSONApiTxtField: UITextField!
     @IBOutlet weak var lblDisplayPercent: UILabel!
-    
     
     @IBAction func sliderPercentNotifi(_ sender: UISlider) {
         var currenctValue = Double(sender.value).roundTo(places: 2)
         lblDisplayPercent.text = "\(currenctValue)"
+        fetchUserSettings(currentValue: currentValue)
     }
     
+    
+    func fetchUserSettings(currentValue: Double) -> Double {
+        let notifValue = currentValue
+        print(notifValue)
+        return notifValue
+    }
     
     //Store for the specific User -> API to an ID ...
     @IBAction func btnApi(_ sender: Any) {
@@ -70,7 +80,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: ProfilePresenterOutput {
     
     func display(_ displayModel: Profile.DisplayData.Currency) {
-        /*
+       /*
         print("\(displayModel.btc)  + \(displayModel.btcValue)  \n ")
         print("\(displayModel.xrp)  +  \(displayModel.xrpValue) \n")
         print("\(displayModel.eth)  +  \(displayModel.ethValue) \n ")
@@ -86,10 +96,7 @@ extension ProfileViewController: ProfilePresenterOutput {
         print("\(displayModel.xlm)  +  \(displayModel.xlmValue) \n ")
         print("\(displayModel.wawes)  +  \(displayModel.wawesValue) \n ")
         print("\(displayModel.bcn)  +  \(displayModel.bcnValue) \n ")
-         */
-        
-        
-        
+        */
     }
     
     func display(_ error: Profile.DisplayData.Error) {
@@ -102,7 +109,7 @@ extension ProfileViewController: ProfilePresenterOutput {
 
 
 
-// Rounds the double to decimal places value
+// Rounds Double to decimal places value
 extension Double {
     func roundTo(places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
