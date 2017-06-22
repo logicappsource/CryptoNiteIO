@@ -12,8 +12,6 @@ import Serpent
 struct Cell {
     var title: Data?
     var content: Data?
-    
-    
 }
 
 

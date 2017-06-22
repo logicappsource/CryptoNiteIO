@@ -13,7 +13,6 @@ struct ApiCryptoCurrencies {
     var btcValue = ""
     var xrp = ""
     var tsst = ""
-    var eth = "" 
-    
-    
+    var eth = ""
+    var stratis = "" 
 }

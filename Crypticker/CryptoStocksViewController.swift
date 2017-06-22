@@ -11,7 +11,10 @@ import UIKit
 class CryptoStocksViewController: UIViewController {
 
     let presenter: CryptoStocksPresenterInput
-
+    
+    
+    
+    
     convenience init(presenter: CryptoStocksPresenterInput) {
         self.init(presenter: presenter, nibName: nil, bundle: nil)
     }
@@ -42,3 +45,8 @@ class CryptoStocksViewController: UIViewController {
 extension CryptoStocksViewController: CryptoStocksPresenterOutput {
 
 }
+
+
+    
+    
+

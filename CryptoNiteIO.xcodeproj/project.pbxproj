@@ -429,6 +429,7 @@
 		6E8847931EDD6CFC001CC971 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */,
 				6E8847941EDD6D21001CC971 /* ServerRepository.swift */,
 				6E8847961EDD6E58001CC971 /* Repository.swift */,
 				6EBB38211EFA7FF0008783A6 /* ConnectionManager.swift */,
@@ -475,7 +476,6 @@
 				6EBB38171EFA7946008783A6 /* Data.swift */,
 				6EBB381B1EFA7BEC008783A6 /* ApiResponseCurrency.swift */,
 				6EBB381D1EFA7C41008783A6 /* Feed.swift */,
-				6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */,
 			);
 			name = "Profile ";
 			sourceTree = "<group>";

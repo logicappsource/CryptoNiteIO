@@ -8,14 +8,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    //1. JSON API Key
-    //2. Return - Coins Name, Ammount
+    
+    //2. Return - Coins Name, Ammount -> Extension : move the data to to other VC
     //3. MAke serpent request -> save under that specific user
-    //4. Display i Appen.
+    //4.  Store the specific id for a USER  + Global Class
     
     var sKey = ""
     @IBOutlet weak var JSONApiTxtField: UITextField!
     @IBOutlet weak var lblDisplayPercent: UILabel!
+    
+    
     
     @IBAction func sliderPercentNotifi(_ sender: UISlider) {
         var currenctValue = Double(sender.value).roundTo(places: 2)
@@ -27,15 +29,15 @@ class ProfileViewController: UIViewController {
         JSONApiTxtField.text? = sKey
         concatApiKeyFromUser(sKey: sKey)
         presenter.getData()
+        
+        //Store for the specific User -> API to an ID ...
     }
     
     
     func concatApiKeyFromUser(sKey: String) -> String {
-        var sLink = "https://spreadsheets.google.com/feeds/list/"
-        var sLink2 = "\(sKey)"
-        var sLink3 = sLink2 + "/1/public/full?alt=json"
-        print(sLink3)
-        return sLink3
+        var sLink = "https://spreadsheets.google.com/feeds/list/\(sKey)/1/public/full?alt=json"
+        //print(sLink)
+        return sLink
     }
     
     let presenter: ProfilePresenterInput
@@ -71,7 +73,22 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: ProfilePresenterOutput {
     
     func display(_ displayModel: Profile.DisplayData.Currency) {
-//        print("\(displayModel.btc) + \(displayModel.btcValue)") // BTC + Name +Value
+        print("\(displayModel.btc)  + \(displayModel.btcValue)  \n ")
+        print("\(displayModel.xrp)  +  \(displayModel.xrpValue) \n")
+        print("\(displayModel.eth)  +  \(displayModel.ethValue) \n ")
+        print("\(displayModel.dash) +  \(displayModel.dashValue) \n ")
+        print("\(displayModel.etc)+  \(displayModel.etcValue) \n")
+        print("\(displayModel.strat) + \(displayModel.stratValue) \n ")
+        
+        print("\(displayModel.xem)  +  \(displayModel.xemValue) \n ")
+        print("\(displayModel.ltc)  +  \(displayModel.ltcValue) \n ")
+        print("\(displayModel.xmr)  +  \(displayModel.xmrValue) \n ")
+        print("\(displayModel.zec)  +  \(displayModel.zecValue) \n ")
+        print("\(displayModel.gnt)  +  \(displayModel.gntValue) \n ")
+        print("\(displayModel.sc)  +  \(displayModel.scValue) \n ")
+        print("\(displayModel.xlm)  +  \(displayModel.xlmValue) \n ")
+        
+        
     }
     
     func display(_ error: Profile.DisplayData.Error) {
@@ -89,4 +106,8 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+
+
+
 

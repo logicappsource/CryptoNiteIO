@@ -25,8 +25,6 @@ protocol ProfileCoordinatorInput {
 // PRESENTER -> INTERACTOR
 protocol ProfileInteractorInput {
      func perform(_ request: Profile.Request.Currency)
-    
-    
 }
 
 // INTERACTOR -> PRESENTER (indirect)
@@ -40,7 +38,6 @@ protocol ProfileInteractorOutput: class {
 protocol ProfilePresenterInput {
     func viewCreated()
     func getData()
-    
 }
 
 // PRESENTER -> VIEW
