@@ -13,9 +13,7 @@ class ProfileViewController: UIViewController {
     //3. MAke serpent request -> save under that specific user
     //4. Display i Appen.
     
-    
     var sKey = ""
-    
     @IBOutlet weak var JSONApiTxtField: UITextField!
     @IBOutlet weak var lblDisplayPercent: UILabel!
     
@@ -24,21 +22,21 @@ class ProfileViewController: UIViewController {
         lblDisplayPercent.text = "\(currenctValue)"
     }
     
-    
-    
     @IBAction func btnApi(_ sender: Any) {
+        var key: String?
+        JSONApiTxtField.text? = sKey
+        concatApiKeyFromUser(sKey: sKey)
         presenter.getData()
-//        JSONApiTxtField.text? = sKey
-//        concatApiKeyFromUser(sKey: sKey)
     }
     
     
     func concatApiKeyFromUser(sKey: String) -> String {
-        var sLink = "https://spreadsheets.google.com/feeds/list/ \(sKey) /1/public/full?alt=json";
-        print(sLink)
-        return sLink
+        var sLink = "https://spreadsheets.google.com/feeds/list/"
+        var sLink2 = "\(sKey)"
+        var sLink3 = sLink2 + "/1/public/full?alt=json"
+        print(sLink3)
+        return sLink3
     }
-    
     
     let presenter: ProfilePresenterInput
 
@@ -56,15 +54,16 @@ class ProfileViewController: UIViewController {
     }
 
     // MARK: - View Lifecycle -
-
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewCreated()
     }
 
     // MARK: - Callbacks -
-
 }
+
+
+
 
 // MARK: - Display Logic -
 
@@ -72,10 +71,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: ProfilePresenterOutput {
     
     func display(_ displayModel: Profile.DisplayData.Currency) {
-       JSONApiTxtField.text = " \(displayModel.xrpValue) + \(displayModel.xrp ) "
 //        print("\(displayModel.btc) + \(displayModel.btcValue)") // BTC + Name +Value
-        
-        
     }
     
     func display(_ error: Profile.DisplayData.Error) {

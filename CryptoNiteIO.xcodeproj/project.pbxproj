@@ -15,6 +15,13 @@
 		07DA619E1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; };
 		07DA619F1965E3A600E97CC3 /* CryptoCurrencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07DA61891965E3A600E97CC3 /* CryptoCurrencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */; };
+		6E39AD0A1EFBCC7C00CCD766 /* CryptoStocksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD031EFBCC7C00CCD766 /* CryptoStocksCoordinator.swift */; };
+		6E39AD0B1EFBCC7C00CCD766 /* CryptoStocksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD041EFBCC7C00CCD766 /* CryptoStocksInteractor.swift */; };
+		6E39AD0C1EFBCC7C00CCD766 /* CryptoStocksModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD051EFBCC7C00CCD766 /* CryptoStocksModels.swift */; };
+		6E39AD0D1EFBCC7C00CCD766 /* CryptoStocksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD061EFBCC7C00CCD766 /* CryptoStocksPresenter.swift */; };
+		6E39AD0E1EFBCC7C00CCD766 /* CryptoStocksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD071EFBCC7C00CCD766 /* CryptoStocksProtocols.swift */; };
+		6E39AD0F1EFBCC7C00CCD766 /* CryptoStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD081EFBCC7C00CCD766 /* CryptoStocksViewController.swift */; };
+		6E39AD101EFBCC7C00CCD766 /* CryptoStocksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E39AD091EFBCC7C00CCD766 /* CryptoStocksViewController.xib */; };
 		6E3D08A81EF2B4F600BFC2A5 /* ethereum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08A71EF2B4F600BFC2A5 /* ethereum.gif */; };
 		6E3D08AA1EF2B6A400BFC2A5 /* ethereumDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */; };
 		6E3D08AC1EF2C47700BFC2A5 /* btcdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D08AB1EF2C47700BFC2A5 /* btcdrop.png */; };
@@ -169,6 +176,13 @@
 		07DA618C1965E3A600E97CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DA618D1965E3A600E97CC3 /* CryptoCurrencyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCurrencyKit.h; sourceTree = "<group>"; };
 		4C41798E1E1ADDA400D2D78A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E39AD031EFBCC7C00CCD766 /* CryptoStocksCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksCoordinator.swift; sourceTree = "<group>"; };
+		6E39AD041EFBCC7C00CCD766 /* CryptoStocksInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksInteractor.swift; sourceTree = "<group>"; };
+		6E39AD051EFBCC7C00CCD766 /* CryptoStocksModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksModels.swift; sourceTree = "<group>"; };
+		6E39AD061EFBCC7C00CCD766 /* CryptoStocksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksPresenter.swift; sourceTree = "<group>"; };
+		6E39AD071EFBCC7C00CCD766 /* CryptoStocksProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksProtocols.swift; sourceTree = "<group>"; };
+		6E39AD081EFBCC7C00CCD766 /* CryptoStocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoStocksViewController.swift; sourceTree = "<group>"; };
+		6E39AD091EFBCC7C00CCD766 /* CryptoStocksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CryptoStocksViewController.xib; sourceTree = "<group>"; };
 		6E3D08A71EF2B4F600BFC2A5 /* ethereum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ethereum.gif; sourceTree = "<group>"; };
 		6E3D08A91EF2B6A400BFC2A5 /* ethereumDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethereumDown.png; sourceTree = "<group>"; };
 		6E3D08AB1EF2C47700BFC2A5 /* btcdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btcdrop.png; sourceTree = "<group>"; };
@@ -381,6 +395,7 @@
 		6E6069031EDC8DD80069FF50 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6EE8883F1EFBCC2D00A5067A /* CryptoStocks */,
 				6E8CF7F51EFA66F600A7DF7C /* Profile  */,
 				6E8847BA1EDF0430001CC971 /* Ethereum */,
 			);
@@ -463,6 +478,20 @@
 				6EBB381F1EFA7CF5008783A6 /* RepositoryAPI.swift */,
 			);
 			name = "Profile ";
+			sourceTree = "<group>";
+		};
+		6EE8883F1EFBCC2D00A5067A /* CryptoStocks */ = {
+			isa = PBXGroup;
+			children = (
+				6E39AD031EFBCC7C00CCD766 /* CryptoStocksCoordinator.swift */,
+				6E39AD041EFBCC7C00CCD766 /* CryptoStocksInteractor.swift */,
+				6E39AD051EFBCC7C00CCD766 /* CryptoStocksModels.swift */,
+				6E39AD061EFBCC7C00CCD766 /* CryptoStocksPresenter.swift */,
+				6E39AD071EFBCC7C00CCD766 /* CryptoStocksProtocols.swift */,
+				6E39AD081EFBCC7C00CCD766 /* CryptoStocksViewController.swift */,
+				6E39AD091EFBCC7C00CCD766 /* CryptoStocksViewController.xib */,
+			);
+			name = CryptoStocks;
 			sourceTree = "<group>";
 		};
 		8331BFF219671DBE00FBA23E /* JBChartView */ = {
@@ -684,6 +713,7 @@
 				6E82FAA41EE1BA540045FB7A /* bitcoingif.gif in Resources */,
 				4C41798F1E1ADDA400D2D78A /* LaunchScreen.storyboard in Resources */,
 				07DA616D1965E33100E97CC3 /* Main.storyboard in Resources */,
+				6E39AD101EFBCC7C00CCD766 /* CryptoStocksViewController.xib in Resources */,
 				6E3D08AA1EF2B6A400BFC2A5 /* ethereumDown.png in Resources */,
 				6E3D08AC1EF2C47700BFC2A5 /* btcdrop.png in Resources */,
 				6E8847C81EDF044C001CC971 /* EthereumViewController.xib in Resources */,
@@ -766,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E39AD0F1EFBCC7C00CCD766 /* CryptoStocksViewController.swift in Sources */,
 				6E88477A1EDCA209001CC971 /* AppCoordinator.swift in Sources */,
 				6E8847C51EDF044C001CC971 /* EthereumPresenter.swift in Sources */,
 				6E88477C1EDD63AD001CC971 /* CryptoCurrencies.swift in Sources */,
@@ -775,6 +806,9 @@
 				6E8847781EDCA1F6001CC971 /* Coordinator.swift in Sources */,
 				6E8847C41EDF044C001CC971 /* EthereumModels.swift in Sources */,
 				6E82FAA21EE1984F0045FB7A /* EthereumCurrency.swift in Sources */,
+				6E39AD0A1EFBCC7C00CCD766 /* CryptoStocksCoordinator.swift in Sources */,
+				6E39AD0D1EFBCC7C00CCD766 /* CryptoStocksPresenter.swift in Sources */,
+				6E39AD0B1EFBCC7C00CCD766 /* CryptoStocksInteractor.swift in Sources */,
 				6EBB38161EFA78F5008783A6 /* Cell.swift in Sources */,
 				6E3D08AE1EF2CAF600BFC2A5 /* bitcoinCurrency.swift in Sources */,
 				07DA616A1965E33100E97CC3 /* ViewController.swift in Sources */,
@@ -792,7 +826,9 @@
 				6E8847CA1EDF079E001CC971 /* TempEthereumViewController.swift in Sources */,
 				6E8CF8001EFA670700A7DF7C /* ProfilePresenter.swift in Sources */,
 				6EBB38221EFA7FF0008783A6 /* ConnectionManager.swift in Sources */,
+				6E39AD0E1EFBCC7C00CCD766 /* CryptoStocksProtocols.swift in Sources */,
 				6EBB38201EFA7CF5008783A6 /* RepositoryAPI.swift in Sources */,
+				6E39AD0C1EFBCC7C00CCD766 /* CryptoStocksModels.swift in Sources */,
 				6E8847C31EDF044C001CC971 /* EthereumInteractor.swift in Sources */,
 				6E8CF7FD1EFA670700A7DF7C /* ProfileCoordinator.swift in Sources */,
 				6E8847B21EDECBDB001CC971 /* ExchangeRate.swift in Sources */,
